@@ -30,16 +30,8 @@ h1{
   font-weight: bold;
 }
 
-/* temp*/
-.container {
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.main_titre{
+/*Logo & Navigation*/
+.main-titre{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -80,6 +72,111 @@ nav a:hover
   padding-top: 1.87rem;
 } 
 
-p{
-  line-height: 0.2rem;
+/*SEARCH BUTTON */
+
+/*Search title*/
+.rechercher-titre{
+  line-height: 0.5rem;
+}
+
+/*define rechercher button*/
+.recherche-button{
+  display: flex;
+  align-items: center;
+  height: 3.125rem; /*50px*/
+}
+
+/*styling for left side of rechercher button in grey*/
+.recherche-button-left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.125rem;
+  width: 3.125rem;
+  background:#F2F2F2;
+  border-radius: 0.6rem 0rem 0rem 0.6rem;
+  /*top-left,top-right,bottom-right,bottom-left*/
+}
+
+/*icon sizing & postion in rechercher button*/
+.recherche-button-left img{
+  height: 1.2rem;
+  width: 1.2rem;
+  padding-left: 0.4rem;
+}
+
+/*styling for input field of rechercher button*/
+input[type=search] {
+  height: 3.125rem;
+  width: 10rem;
+  border: 0.15rem solid #F2F2F2;
+}
+
+/*styling for right side of rechercher button in blue*/
+label{
+  font-size: 0.875rem;
+  font-weight: bold;
+  color:  #fff;
+  background:#0065FC;
+  padding: 1rem;
+  border-radius: 0rem 0.6rem 0.6rem 0rem;
+}
+
+
+/*FILTRE BUTTONS*/
+
+/*align filtre-title heading next to filtre buttons*/
+.filtre-buttons{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.filtre-title{
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/*defining general shape of filtre button & aligning text*/
+.filtre-btn {
+  position:relative;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  height: 2.5rem;
+  padding-right:  1rem;
+  padding-left: 3.2rem;
+  border-radius: 10rem;
+  border: 0.1rem solid #F2F2F2;
+  background: #fff;
+  font-weight: bold;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/*defining circle form to left in filtre button & positioning icon*/
+.filtre-btn-circle{
+  position: absolute;
+  top: -0.1rem;
+  left: -0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rem;
+  background: #F2F2F2;
+  background: #DEEBFF;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/*Size of icon in filtre button*/
+.filtre-btn-circle img{
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+.filtre-btn:hover {
+  Box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, .2);
+  /* x,y,blur,spread*/
 }
