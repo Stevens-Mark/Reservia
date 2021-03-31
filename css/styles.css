@@ -18,6 +18,13 @@ html, body {
   font-family: 'Raleway', Arial, serif;
 }
 
+/*TEST Set max screen size for page = same as mockup 
+#bloc_page
+{ 
+  max-width: 1440px;
+  margin: auto;
+}*/
+
 /*border-box indique au navigateur de prendre en compte la bordure et
  le remplissage dans la valeur définie pour la largeur et la hauteur*/
 * {
@@ -64,20 +71,27 @@ nav a
  margin-right: 3rem;
 }
 
-/*define hover syle*/
-nav a:hover
-{
+/*define visted hover & active syle*/
+nav a:visited{
+  color: #0065FC;
+} 
+
+nav a:hover{
   color: #0065FC;
   border-top: 0.1rem solid #0065FC;
-  padding-top: 1.87rem;
+  padding-top: 1rem;
+} 
+
+nav a:active{
+  color: #000;
 } 
 
 /*SEARCH BUTTON */
 
-/*Search title*/
+/*Search title
 .rechercher-titre{
   line-height: 0.5rem;
-}
+}*/
 
 /*define rechercher button*/
 .recherche-button{
