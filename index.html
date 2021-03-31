@@ -12,76 +12,58 @@
 </head>    
 <body>
 	
-<div id="bloc_page">
 	<!--Header-->
-<header>
-	<div class="main-titre">
-		<div class="logo"><!--Logo gauche-->  
-			<img src="images/logo/Reservia.svg" alt="Reservia_logo" title="Reservia Logo">
-		</div> 
-
-			<nav><!--Nav droit-->
-				<ul>
-					   <li><a href="#hebergement">Hébergements</a></li>
-					<li><a href="#activities">Activitiés</a></li>
-					<li><a href="#">S'inscrire</a></li>
-				</ul>
-			</nav>      
-	</div>
-	
-    <!--Rechercher titre: justifie à gauche-->
-	<div class="rechercher-titre">
+<header id="header" class="d-flex">
+		<img src="images/logo/Reservia.svg" alt="Reservia_logo" title="Reservia Logo">
+		<nav><!--Nav droit-->
+			<ul>
+				<li><a href="#hebergement">Hébergements</a></li>
+				<li><a href="#activities">Activitiés</a></li>
+				<li id="inscrire"><a  href="#">S'inscrire</a></li>
+			</ul>
+		</nav>      
+</header>
+    
+<main id="main">
+	<section id="filter">
 		<h1>Trouvez votre hébergements pour des vacances de rêve</h1>
 		<p>En plein centre ville ou en pleine nature</p>
-	</div>
-	
-    <!--rechercher input: -->
-	<div class="recherche-button">
-		<div class="recherche-button-left">
+		
+		<!--search button: -->
+		<div class="recherche-button">
+			<form method="post" action="#">
 				<img src="images/icon/map-marker-alt-solid.svg" alt="Icon" title="Icon">
-		</div>
-
-		<div class="recherche-form">
-			   <form method="post" action="#">
-				<p>
-				<input type="search" name="ville-research" id="ville-research" placeholder="Ex: Marseille, France" /><label for="ville-research">Rechercher</label>
-				</p>
+				<input type="text" name="ville-research" id="ville-research" placeholder="Ex: Marseille, France" >
+				<label for="ville-research">Rechercher</label>
 			</form>
 		</div>
-	</div> 	
-	
-	<!--DO I NEED THIS?	<input type="submit" value="Submit">-->
+		
+		<!-- 5 buttons filters: --> 
+		<div id="filter-buttons-items" class="d-flex">
+			
+				<p class="filtre-title">Filtres</p>
 
-  	<!-- 5 buttons filtres: --> 
-	<div class="filtre-buttons">
-		<div class="filtre-title">Filtres</div>
+				<div class="filtre-btn">
+						<img src="images/icon/money-bill-wave-solid.svg" alt="Icon" title="Icon">
+						<p> Economique</p>
+				</div>
 
-    	<div class="filtre-btn">
-      		<div class="filtre-btn-circle">  
-        	<img src="images/icon/money-bill-wave-solid.svg" alt="Icon" title="Icon"></div>
-           	Economique  
-      	</div>
+				<div class="filtre-btn">
+					<img src="images/icon/child-solid.svg" alt="Icon" title="Icon">
+					<p>Familial</p>
+				</div>
 
-      	<div class="filtre-btn">
-      		<div class="filtre-btn-circle">  
-        	<img src="images/icon/child-solid.svg" alt="Icon" title="Icon"></div>
-           	Familial 
-      	</div>
+				<div class="filtre-btn">
+					<img src="images/icon/heart-solid.svg" alt="Icon" title="Icon">
+					<p>Romantique</p>
+				</div>
 
-      	<div class="filtre-btn">
-      		<div class="filtre-btn-circle">  
-        	<img src="images/icon/heart-solid.svg" alt="Icon" title="Icon"></div>
-           	Romantique
-      	</div>
-
-      	<div class="filtre-btn">
-      		<div class="filtre-btn-circle">  
-        	<img src="images/icon/dog-solid.svg" alt="Icon" title="Icon"></div>
-      		Animaux authourisés
-      	</div>
-  	</div> 
-
-</header> 
+				<div class="filtre-btn">
+					<img src="images/icon/dog-solid.svg" alt="Icon" title="Icon">
+					<p>Animaux authourisés</p>
+				</div>
+		</div> 
+	</section>
 <!--Section 1 -->
 
     <!--Article: Hébergements -->
@@ -120,10 +102,10 @@
 				Carte 6-->
 <!--Section Activités-->
 
-
+</main>
 <!--Footer-->
 
-</div> <!--end of div #bloc-page-->
+<!--end of div #bloc-page-->
 </body>
 
 </html>
