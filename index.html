@@ -12,91 +12,247 @@
 </head>    
 <body>
 	
-<div id="bloc_page">
-	<!--Header-->
-<header>
-	<div class="main-titre">
-		<div class="logo"><!--Logo gauche-->  
-			<img src="images/logo/Reservia.svg" alt="Reservia_logo" title="Reservia Logo">
-		</div> 
 
-			<nav><!--Nav droit-->
-				<ul>
-					   <li><a href="#hebergement">Hébergements</a></li>
-					<li><a href="#activities">Activitiés</a></li>
-					<li><a href="#">S'inscrire</a></li>
-				</ul>
-			</nav>      
-	</div>
-	
-    <!--Rechercher titre: justifie à gauche-->
-	<div class="rechercher-titre">
+<header id="header" class="d-flex">
+		<img src="images/logo/Reservia.svg" alt="Reservia_logo" title="Reservia Logo">
+		<nav><!--Nav droit-->
+			<ul>
+				<li><a href="#hebergement">Hébergements</a></li>
+				<li><a href="#activities">Activitiés</a></li>
+				<li id="inscrire"><a  href="#">S'inscrire</a></li>
+			</ul>
+		</nav>      
+</header>
+    
+<main id="main">
+	<section id="filter">
 		<h1>Trouvez votre hébergements pour des vacances de rêve</h1>
 		<p>En plein centre ville ou en pleine nature</p>
-	</div>
-	
-    <!--rechercher input: -->
-	<div class="recherche-button">
-		<div class="recherche-button-left">
+		
+		<!--search button: -->
+		<div class="recherche-button">
+			<form method="post" action="#">
 				<img src="images/icon/map-marker-alt-solid.svg" alt="Icon" title="Icon">
-		</div>
-
-		<div class="recherche-form">
-			   <form method="post" action="#">
-				<p>
-				<input type="search" name="ville-research" id="ville-research" placeholder="Ex: Marseille, France" /><label for="ville-research">Rechercher</label>
-				</p>
+				<input type="text" name="ville-research" id="ville-research" placeholder="Ex: Marseille, France" >
+				<label for="ville-research">Rechercher</label>
 			</form>
 		</div>
-	</div> 	
+		
+		<!-- 5 buttons filters: --> 
+		<div id="filter-buttons-items" class="d-flex">
+			
+				<p class="filtre-title">Filtres</p>
+
+				<div class="filtre-btn">
+						<img src="images/icon/money-bill-wave-solid.svg" alt="Icon" title="Icon">
+						<p> Economique</p>
+				</div>
+
+				<div class="filtre-btn">
+					<img src="images/icon/child-solid.svg" alt="Icon" title="Icon">
+					<p>Familial</p>
+				</div>
+
+				<div class="filtre-btn">
+					<img src="images/icon/heart-solid.svg" alt="Icon" title="Icon">
+					<p>Romantique</p>
+				</div>
+
+				<div class="filtre-btn">
+					<img src="images/icon/dog-solid.svg" alt="Icon" title="Icon">
+					<p>Animaux authourisés</p>
+				</div>
+		</div>
+ 				<!--Information icon with text-->
+				<div class="info">
+					<img src="images/icon/info-solid.svg" alt="Icon" title="Icon">
+					<p>Plus de 500 logements sont disponibles dans cette ville</p>
+				</div>	
+	</section>
+
+	</section id="hebergements" class="d-flex">   <!-- contains Hebergements  & les populaires -->
 	
-	<!--DO I NEED THIS?	<input type="submit" value="Submit">-->
+		<article> <!--Article: Hébergements -->
+			<!--titre-->
+			<h1>Hébergements à Marseille</h1>
 
-  	<!-- 5 buttons filtres: --> 
-	<div class="filtre-buttons">
-		<div class="filtre-title">Filtres</div>
+			<!--start of Hébergement cards block -->
+			<div id="hebergement-cartes" class="d-flex">
 
-    	<div class="filtre-btn">
-      		<div class="filtre-btn-circle">  
-        	<img src="images/icon/money-bill-wave-solid.svg" alt="Icon" title="Icon"></div>
-           	Economique  
-      	</div>
+		  		<!--Hébergement Carte 1-->
+				<div class="cartes">
+					<img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Hebergement" title="Hebergement">
+						<div class="description">
 
-      	<div class="filtre-btn">
-      		<div class="filtre-btn-circle">  
-        	<img src="images/icon/child-solid.svg" alt="Icon" title="Icon"></div>
-           	Familial 
-      	</div>
+							<h3>Auberge la Cannebière</h3>
+							<p>Nuit à partir de 25€</p>
 
-      	<div class="filtre-btn">
-      		<div class="filtre-btn-circle">  
-        	<img src="images/icon/heart-solid.svg" alt="Icon" title="Icon"></div>
-           	Romantique
-      	</div>
+							<div class="rating"><!--star rating-->
+							<div class="star-blue"></div>
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-grey"></div> 
+						</div> 
+					</div>	
+				</div>
+				<!--Hébergement Carte 2-->
+				<div class="cartes">
+					<img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<div class="description">
+						<div>
+						<h3>Hôtel du port</h3>
+						<p>Nuit à partir de 52€</p>
+						</div>	
+						<div class="rating"><!--star rating-->
+							<div class="star-blue"></div>
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+						</div> 
+					</div>
+				</div>
+				<!--Hébergement Carte 3-->
+				<div class="cartes">
+					<img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<div class="description">
+						<div>
+						<h3>Hôtel Les mouettes</h3>
+						<p>Nuit à partir de 76€</p>
+						</div>
+						<div class="rating"><!--star rating-->
+							<div class="star-blue"></div>
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-grey"></div> 
+						</div> 
+					</div>
+				</div>
+				<!--Hébergement Carte 4-->
+				<div class="cartes">
+					<img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<div class="description">
+						<div>
+						<h3>Hötel de la mer</h3>
+						<p>Nuit à partir de 46€</p>
+						</div>
+						<div class="rating"><!--star rating-->
+							<div class="star-blue"></div>
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-grey"></div> 
+							<div class="star-grey"></div> 
+						</div> 
+					</div>
+				</div>
+				<!--Hébergement Carte 5-->
+				<div class="cartes">
+					<img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Hebergement" title="Hebergement">
+				 	<div class="description">
+						<div>
+						<h3>Auberge Le Panier</h3>
+						<p>Nuit à partir de 23€</p>
+						</div>
+							<div class="rating"><!--star rating-->
+						 	<div class="star-blue"></div>
+						 	<div class="star-blue"></div> 
+						 	<div class="star-blue"></div> 
+						 	<div class="star-blue"></div> 
+						 	<div class="star-grey"></div> 
+					 	</div> 
+				 	</div>
+			 	</div>
+				<!--Hébergement Carte 6-->
+				<div class="cartes">
+					<img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<div class="description">
+						<div>
+						<h3>Hötel chez Amina</h3>
+						<p>Nuit à partir de 96€</p>
+						</div>
+						<div class="rating"><!--star rating-->
+							<div class="star-blue"></div>
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+						</div> 
+					</div>  
+				</div> 	 
+			</div>  <!--end of Hébergement cards block -->
+			<h3>Afficher plus</h3>		          
+		</article>  <!--END: Article: Hébergements -->
 
-      	<div class="filtre-btn">
-      		<div class="filtre-btn-circle">  
-        	<img src="images/icon/dog-solid.svg" alt="Icon" title="Icon"></div>
-      		Animaux authourisés
-      	</div>
-  	</div> 
 
-</header> 
-<!--Section 1 -->
+		<aside > <!--Aside:les plus populaire -->
+			<!--titre-->
+			<div class="populaire-titre">
+				<h1>Les plus populaires</h1>
+				<img src="images/icon/chart-line-solid.svg" alt="Icon" title="Icon">
+			</div>
 
-    <!--Article: Hébergements -->
-        <!-- approximate width 70%. position: left: same height as Aside-->
+			<!--start of populaire cards block -->
+			<div id="populaire-cartes" class="d-flex">
+				
+				<!--Populaire Carte 1-->
+				<div class="pop-carte">
+					<img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<div class="description">
+						<div>
+							<h3>Hôtel Le soleil du matin</h3>
+							<p>Nuit à partir de 128€</p>
+						</div>
+						<div class="rating"><!--star rating-->
+							<div class="star-blue"></div>
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+						</div> 
+					</div>
+				</div> 
+				<!--Populaire Carte 2-->
+				<div class="pop-carte">
+					<img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<div class="description">
+						<div>
+						   <h3>Au coeur de l'eau Chambres d'hôtes</h3>
+							<p>Nuit à partir de 71€</p>
+						</div>
+						<div class="rating"><!--star rating-->
+							<div class="star-blue"></div>
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-grey"></div> 
+						</div> 
+					</div>
+				</div> 
+				<!--Populaire Carte 3-->		
+				<div class="pop-carte">
+					<img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<div class="description">
+						<div>
+						   <h3>Hôtel Tout bleu et Blanc</h3>
+							<p>Nuit à partir de 58€</p>
+						</div>
+						<div class="rating">
+							<div class="star-blue"></div>
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-blue"></div> 
+							<div class="star-grey"></div> 
+						</div>  
+					</div>
+				</div>
+			</div><!--END of populaire cards block -->
+		</aside><!--END: Aside:les plus populaire -->
+	</section> <!--END:Section 1 contains Hebergement article & populaire aside --> 
 
-		  	<!--6 cartes:
-		   		Hébergement Carte 1
-		   		Hébergement Carte 2 
-		   		Hébergement Carte 3 
-		   		Hébergement Carte 4 
-		   		Hébergement Carte 5 
-				Hébergement Carte 6--> 
 
-    <!--/Article: Hébergements -->
-
+	</aside>
     <!--Aside: -->
         <!--approximate width 30%. position: right: same height as Article -->
 
@@ -120,10 +276,10 @@
 				Carte 6-->
 <!--Section Activités-->
 
-
+</main>
 <!--Footer-->
 
-</div> <!--end of div #bloc-page-->
+<!--end of div #bloc-page-->
 </body>
 
 </html>
