@@ -37,6 +37,11 @@ h1 {
   font-size: 1.25rem; /*20px*/
   margin: 0px;
   font-weight: bold;
+  margin-bottom: 0rem;
+}
+
+h3 {
+  font-size: 1rem; /*16px*/
 }
 
 /*Logo & Navigation*/
@@ -83,14 +88,14 @@ nav a:hover {
 
 /*icon sizing & position leftside of rechercher button*/
 .recherche-button img {
-  height: 50px;
-  width: 50px;
-  background: #f2f2f2;
-  border-radius: 0.6rem 0rem 0rem 0.6rem;
-  position: relative;
-  top: 21px;
-  right: -5px;
-  padding: 10px;
+    height: 50px;
+    width: 50px;
+    background: #f2f2f2;
+    border-radius: 0.6rem 0rem 0rem 0.6rem;
+    position: relative;
+    top: 19px;
+    right: -5px;
+    padding: 9px;
 }
 
 /*styling for input field of rechercher button*/
@@ -98,6 +103,7 @@ input[type="text"] {
   height: 50px;
   width: 220px;
   border: 0.15rem solid #f2f2f2;
+  font-size: 1.125rem;
 }
 
 /*styling for right side of rechercher button in blue*/
@@ -164,7 +170,6 @@ label {
 }
 
 /*information icon & text styling*/
-
 .info img{
   height: 25px;
   width: 25px;
@@ -182,21 +187,25 @@ label {
 
 /*HEBERGEMENT & LES PLUS POPULAIRE SECTION*/
 
-
+/*style background for hebergement& les populaire*/
 article, aside{
+  padding: 1.875rem;
   background: #F2F2F2;
   border-radius: 1rem;
-  padding: 1.875rem;  
 }
 
-
-
-/*Positioning/Spacing Hebergement & Populaire */
-#hebergements{
-   justify-content: space-between;
-   flex-direction: column-reverse;
-  
+/*set width ratios for hebergement & les populaire using flex grow*/
+article{
+  flex: 3;
+  margin-right: 1.875rem;
 }
+
+aside{
+  flex: 1;
+}
+
+/*HEBERGEMENT ARTICLE*/
+/*Positioning,Spacing & styling of Hebergement cards*/
 
 #hebergement-cartes{
   flex-wrap: wrap;
@@ -207,7 +216,7 @@ article, aside{
 
  .cartes{
   /*short hand for flex grow, flesh shrink, flex-basis
-  cards shrink & grow. width of card is 240px but will grow to max 300px */
+  cards shrink & grow. width of card is 240px but will grow to max 300px*/
    flex: 1 1 240px;
    max-width: 300px;
    display: flex;
@@ -216,9 +225,9 @@ article, aside{
    background-color: #fff;
    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
    padding: 0.4rem;
-   border: 2px solid black;
 }
 
+/*hebergement image styling*/
 .cartes img{
  /*top-left,top-right,bottom-right,bottom-left*/
  border-radius: 1rem 1rem 0rem 0rem;
@@ -226,12 +235,22 @@ article, aside{
  object-fit: cover;
 }
 
+.description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
+
+.description p {
+    margin-top: -10px;
+}
+/*styling of accomodation blue/grey star rating*/
 .rating{
   display: flex;
 }
 
 .star-blue{
-  width: 1.1rem;
+  width: 1rem;
   height: 1rem;
   background-image: url("../images/icon/star-solid-blue.svg");
 }
@@ -242,28 +261,27 @@ article, aside{
   background-image: url("../images/icon/star-solid-grey.svg");
 }
 
-
-
  /*LES PLUS POPULAIRE ASIDE*/
+/*Positioning/Spacing & styling of Populaire cards */
 
- /*styling for title*/
+ /* for title*/
  .populaire-titre{
   display: flex;
   justify-content: space-between;
 }
 
- /*icon sizing & black graph icons*/
+ /*icon sizing of black graph icon*/
  .populaire-titre img{
   height: 1rem;
   width: 1rem;
 }
 
-/*populaire card container*/
+/*populaire cards container*/
 #populaire-cartes{
   flex-direction: column;
   gap: 1.875rem;
   align-items: center;
-  border: 1px solid blue;
+  margin-top: 1.875rem;
 }
 
 /*populaire card styling*/
@@ -276,6 +294,8 @@ article, aside{
     box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
     padding: 0.5rem;
   }
+
+/*populaire image sizing etc*/
 .pop-carte img{
   /*top-left,top-right,bottom-right,bottom-left*/
   border-radius: 1rem  0rem 0rem 1rem;
