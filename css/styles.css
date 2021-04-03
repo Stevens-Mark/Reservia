@@ -25,7 +25,6 @@ body {
 a{
   color: #000;
   text-decoration: none;
-  font-weight: bold;
 }
 
 #main, #header, #hebergements, #activites {
@@ -34,7 +33,6 @@ a{
 }
 
 footer{
-  height: 220px;
   background: #f2f2f2;
   max-width: 1440px;
   margin: auto;
@@ -46,9 +44,9 @@ footer{
   box-sizing: border-box;
 }
 
-h1 {
+h1, h2 {
   font-size: 1.25rem; /*20px*/
-  margin: 0px;
+  margin: 0rem;
   font-weight: bold;
   margin-bottom: 0rem;
 }
@@ -81,7 +79,7 @@ nav a {
 
 /* set colour of last link "inscrire" to blue & bold instead of black*/
 
-li:nth-child(3) a{
+nav li:nth-child(3) a{
   color:#0065fc; 
   font-weight: bolder;
 }
@@ -91,7 +89,6 @@ nav a:hover {
   color: #0065fc;
   border-top: 0.1rem solid #0065fc;
   padding-top: 1rem;
-  font-weight: bolder;
 }
 
 /*MAIN*/
@@ -129,6 +126,7 @@ label {
   margin-left: 0px;
   position: relative;
   left: -4px;
+  top: -2px;
 }
 
 /*FILTER BUTTONS*/
@@ -157,6 +155,7 @@ label {
   background: #fff;
   font-weight: bold;
   margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 /*aligning text in filtre button*/
@@ -183,19 +182,17 @@ label {
 }
 
 /*information icon styling*/
-.info img{
+#info{
+  align-items: center;
+}
+#info img{
   height: 25px;
   width: 25px;
   padding: 4px;
+  margin-right: 10px;
   border-radius: 50%;
   background: #ffff;
-  border: 2px solid #f2f2f2;
-  position: relative;
-  top: 42px;
-}
-
-.info p{
-    margin-left: 30px;
+  border: 2px solid #f2f2f2; 
 }
 
 /*HEBERGEMENT & LES PLUS POPULAIRE SECTION*/
@@ -204,7 +201,6 @@ label {
 article, aside{
   background: #F2F2F2;
   border-radius: 1rem;
-  margin-bottom: 1.875rem;
 }
 
 article{
@@ -222,11 +218,11 @@ article{
   margin-bottom: 1.875rem;
 }
 
- .carte a{
+ .heberge-carte a{
   /*short hand for flex grow, flesh shrink, flex-basis
-  cards shrink & grow. width of card is 240px but will grow to max 300px*/
-   flex: 1 1;
-   min-width: 250px;
+  cards shrink & grow. width of card is 240px but will grow to max 300px
+   flex: 1 1;*/
+   width: 250px;
    
    display: flex;
    flex-direction: column;
@@ -237,12 +233,12 @@ article{
 }
 
 /*reposition text under heading in hebegement card*/
-.carte p{
-  margin-top: -10px;
+.heberge-carte p{
+  margin-top: -0.625rem;
 }
 
 /*hebergement image styling*/
-.carte img{
+.heberge-carte img{
  /*top-left,top-right,bottom-right,bottom-left*/
  border-radius: 1rem 1rem 0rem 0rem;
  height: 115px;
@@ -284,7 +280,7 @@ article{
 /*populaire cards container*/
 #populaire-items{
   flex-direction: column;
-  gap: 2.75rem;
+  gap: 1.875rem;
   align-items: center;
   margin-top: 1.875rem;
 }
@@ -317,7 +313,7 @@ article{
   }
 
 .description p {
-    margin-top: -10px;
+    margin-top: -0.625rem;
 }
 
 /*ACTIVITES SECTION*/
@@ -328,7 +324,7 @@ article, aside{
 }
 
 #activites{
-  padding-top: 1.875rem;
+  margin-top: 3.125rem;
   margin-bottom: 3.125rem;
 
 }
@@ -387,6 +383,28 @@ article, aside{
 
 /*HOVER STYLING*/
 /*hover style for ALL cards*/
-.carte a:hover, .pop-carte a:hover, .activite-carte a:hover{
+.heberge-carte a:hover, .pop-carte a:hover, .activite-carte a:hover{
   box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
 }
+
+/*FOOTER*/
+
+#footer{
+  flex-wrap: wrap;
+ 
+}
+#a-propos, #nos-hébergements, #assistance
+{
+    width: 25%;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+    
+}
+
+footer ul{
+  list-style-type: none;
+  padding-left: 0rem;
+  line-height: 1.875rem;
+}
+

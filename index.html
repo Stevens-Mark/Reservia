@@ -64,7 +64,7 @@
 			
 		</div>
 				<!--Information icon with text-->
-			<div class="info">
+			<div id="info" class="d-flex">
 				<img src="images/icon/info-solid.svg" alt="Icon" title="Icon">
 				<p>Plus de 500 logements sont disponibles dans cette ville</p>
 			</div>	
@@ -72,15 +72,16 @@
 	</section>
 
 	<section id="hebergements" class="d-flex">   <!-- contains Hebergements  & les populaires -->
-	
+		
+		
 		<article> <!--Article: Hébergements -->
-			<h1>Hébergements à Marseille</h1>
-
+			
+			<h2>Hébergements à Marseille</h2>
 			<!--start of Hébergement cards block -->
 			<div id="hebergement-items" class="d-flex">
 			
 				<!--Hébergement Carte 1-->			
-				<div class="carte"><a href="#">
+				<div class="heberge-carte"><a href="#">
 					<img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Hebergement" title="Hebergement">
 					<h3>Auberge la Cannebière</h3>
 					<p>Nuit à partir de 25€</p>
@@ -93,7 +94,7 @@
 						</div></a>	
 				</div>	
 				<!--Hébergement Carte 2-->		
-				<div class="carte"><a href="#">
+				<div class="heberge-carte"><a href="#">
 					<img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hebergement" title="Hebergement">
 					<h3>Hôtel du port</h3>
 					<p>Nuit à partir de 52€</p>
@@ -106,7 +107,7 @@
 						</div></a>
 				</div>
 				<!--Hébergement Carte 3-->			
-				<div class="carte"><a href="#">
+				<div class="heberge-carte"><a href="#">
 					<img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hebergement" title="Hebergement">
 					<h3>Hôtel Les mouettes</h3>
 					<p>Nuit à partir de 76€</p>	
@@ -119,7 +120,7 @@
 						</div></a>
 				</div>
 				<!--Hébergement Carte 4-->			
-				<div class="carte"><a href="#">
+				<div class="heberge-carte"><a href="#">
 					<img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hebergement" title="Hebergement">
 					<h3>Hötel de la mer</h3>
 					<p>Nuit à partir de 46€</p>						
@@ -132,7 +133,7 @@
 						</div></a>
 				</div>
 				<!--Hébergement Carte 5-->			
-				<div class="carte"><a href="#">
+				<div class="heberge-carte"><a href="#">
 					<img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Hebergement" title="Hebergement">	
 					<h3>Auberge Le Panier</h3>
 					<p>Nuit à partir de 23€</p>						
@@ -145,7 +146,7 @@
 				 		</div></a>
 			 	</div>
 				<!--Hébergement Carte 6-->			
-				<div class="carte"><a href="#">
+				<div class="heberge-carte"><a href="#">
 					<img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hebergement" title="Hebergement">	<h3>Hötel chez Amina</h3>
 					<p>Nuit à partir de 96€</p>			
 						<div class="rating"><!--star rating-->
@@ -163,7 +164,7 @@
 		<aside > <!--Aside:les plus populaire -->
 			<!--titre-->
 			<div class="populaire-titre">
-				<h1>Les plus populaires</h1>
+				<h2>Les plus populaires</h2>
 				<img src="images/icon/chart-line-solid.svg" alt="Icon" title="Icon">
 			</div>
 
@@ -226,7 +227,7 @@
 	</section> <!--END:Section contains Hebergement article & populaire aside --> 
 
 	<section id="activites">
-		<h1>Activités à Marseille</h1>
+		<h2>Activités à Marseille</h2>
 
 		<!--start of activite cards block -->
 		<div id="activite-items" class="d-flex">
@@ -265,7 +266,30 @@
 	</section>
 </main>
 
-<footer>
+<footer id="footer" class="d-flex">
+
+	<div id="a-propos" >
+		<h3>A propos</h3>
+			<ul>
+				<li><a href="#">Functionnement du site</a></li>
+				<li><a href="#">Conditions générales de vente</a></li>
+				<li><a href="#">Données et confidentialité</a></li>
+			</ul>
+	</div>
+	<div id="nos-hébergements">
+		<h3>Nos hébergements</h3>
+			<ul>
+				<li><a href="#">Charte qualité</a></li>
+				<li><a href="#">Soumettre votre hôtel</a></li>
+			</ul>
+	</div>
+	<div id="assistance">
+		<h3>Assistance</h3>
+			<ul>
+				<li><a href="#">Centre d'aide</a></li>
+				<li><a href="#">Nous contacter</a></li>
+			</ul>
+	</div>
 
 </footer>
 
