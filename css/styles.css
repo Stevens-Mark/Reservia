@@ -28,14 +28,16 @@ a{
   font-weight: bold;
 }
 
-#main, #header, section, footer {
-  max-width: 1440px;
+#main, #header, #hebergements, #activites {
+  max-width: 1340px;
   margin: auto;
 }
 
 footer{
   height: 220px;
   background: #f2f2f2;
+  max-width: 1440px;
+  margin: auto;
 }
 
 /*border-box tells the browser to take into account the border and the filling
@@ -328,6 +330,7 @@ article, aside{
 #activites{
   padding-top: 1.875rem;
   margin-bottom: 3.125rem;
+
 }
 
 /*activite cards container*/
@@ -345,7 +348,7 @@ article, aside{
 .activite-carte a{
   display: flex;
   flex-direction: column;
-  width: 315px;
+  width: 300px;
   border-radius: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
