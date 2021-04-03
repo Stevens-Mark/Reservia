@@ -200,19 +200,13 @@ label {
 
 /*style background for hebergement& les populaire*/
 article, aside{
-  padding: 1.875rem;
   background: #F2F2F2;
   border-radius: 1rem;
+  margin-bottom: 1.875rem;
 }
 
-/*set width ratios for hebergement & les populaire using flex grow*/
 article{
-  flex: 3;
-  margin-right: 1.875rem;
-}
-
-aside{
-  flex: 1;
+  margin-right: 2.5rem;
 }
 
 /*HEBERGEMENT ARTICLE*/
@@ -227,12 +221,11 @@ aside{
 }
 
  .carte a{
-  /*short hand for flex grow, flesh shrink, flex-basismargin:1.875rem;
-  cards shrink & grow. width of card is 240px but will grow to max 300px
-   flex: 1 1 250px;
-   max-width: 300px;*/
+  /*short hand for flex grow, flesh shrink, flex-basis
+  cards shrink & grow. width of card is 240px but will grow to max 300px*/
+   flex: 1 1;
+   min-width: 250px;
    
-   width: 250px;
    display: flex;
    flex-direction: column;
    border-radius: 1rem; 
@@ -331,6 +324,7 @@ article, aside{
   padding: 1.875rem;
 
 }
+
 #activites{
   padding-top: 1.875rem;
   margin-bottom: 3.125rem;
@@ -343,15 +337,15 @@ article, aside{
   align-items: center;
   flex-wrap: wrap;
   height: 450px;
-  border: 1px solid black;
-  gap: 55px;
-  margin-top: 0.875rem;
+  gap: 45px;
+  margin-top: 1.875rem;
 }
 
+/*styling of activite carte*/
 .activite-carte a{
   display: flex;
   flex-direction: column;
-  width: 305px;
+  width: 315px;
   border-radius: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
@@ -367,14 +361,9 @@ article, aside{
  object-fit: cover;
 }
 
-/*HOVER STYLING*/
-/*hover style for ALL cards*/
-.carte a:hover, .pop-carte a:hover, .activite-carte a:hover{
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
-}
-
-.activite-carte:nth-child(1) img{
-  height: 390px;
+/*setting the height of each activite card*/
+.activite-carte img:nth-child(1), img:nth-child(4){
+  height: 397px;
 }
 
 .activite-carte:nth-child(2) img{
@@ -383,9 +372,6 @@ article, aside{
 
 .activite-carte:nth-child(3) img{
   height: 110px;
-}
-.activite-carte:nth-child(4) img{
-  height: 390px;
 }
 
 .activite-carte:nth-child(5) img{
@@ -396,3 +382,8 @@ article, aside{
   height: 150px;
 } 
 
+/*HOVER STYLING*/
+/*hover style for ALL cards*/
+.carte a:hover, .pop-carte a:hover, .activite-carte a:hover{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
+}
