@@ -28,9 +28,14 @@ a{
   font-weight: bold;
 }
 
-#main, #header, #section {
+#main, #header, section, footer {
   max-width: 1440px;
   margin: auto;
+}
+
+footer{
+  height: 220px;
+  background: #f2f2f2;
 }
 
 /*border-box tells the browser to take into account the border and the filling
@@ -216,17 +221,18 @@ aside{
 #hebergement-items{
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2.75rem;
+  gap: 1.875rem;
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
 
  .carte a{
-  /*short hand for flex grow, flesh shrink, flex-basis
+  /*short hand for flex grow, flesh shrink, flex-basismargin:1.875rem;
   cards shrink & grow. width of card is 240px but will grow to max 300px
-   flex: 1 1 240px;
+   flex: 1 1 250px;
    max-width: 300px;*/
-   width: 240px;
+   
+   width: 250px;
    display: flex;
    flex-direction: column;
    border-radius: 1rem; 
@@ -327,22 +333,29 @@ article, aside{
 }
 #activites{
   padding-top: 1.875rem;
+  margin-bottom: 3.125rem;
 }
 
 /*activite cards container*/
-#activite-items{
+#activite-items {
+  flex-direction: column;
+  JUSTIFY-CONTENT: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 1.875rem; 
+  height: 450px;
+  border: 1px solid black;
+  gap: 55px;
   margin-top: 0.875rem;
 }
 
 .activite-carte a{
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 305px;
   border-radius: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
+
 .activite-carte h3{
   padding-left: 0.625rem;
 }
@@ -351,7 +364,7 @@ article, aside{
 .activite-carte img{
  /*top-left,top-right,bottom-right,bottom-left*/
  border-radius: 1rem 1rem 0rem 0rem;
- 
+ object-fit: cover;
 }
 
 /*HOVER STYLING*/
@@ -359,3 +372,27 @@ article, aside{
 .carte a:hover, .pop-carte a:hover, .activite-carte a:hover{
   box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
 }
+
+.activite-carte:nth-child(1) img{
+  height: 390px;
+}
+
+.activite-carte:nth-child(2) img{
+  height: 180px;
+}
+
+.activite-carte:nth-child(3) img{
+  height: 110px;
+}
+.activite-carte:nth-child(4) img{
+  height: 390px;
+}
+
+.activite-carte:nth-child(5) img{
+  height: 140px;
+} 
+
+.activite-carte:nth-child(6) img{
+  height: 150px;
+} 
+
