@@ -93,7 +93,7 @@ nav a:hover {
 /*SEARCH BUTTON */
 
 /*icon sizing & position leftside of rechercher button*/
-.recherche-button img {
+#place-logo {
     height: 3.125rem;
     width: 3.125rem;
     background: #f2f2f2;
@@ -112,18 +112,38 @@ input[type="text"] {
   font-size: 1.125rem;
 }
 
-/*styling for right side of rechercher button in blue*/
-label {
+/*styling for right side of Rechercher button in blue*/
+#recherche-button {
   font-size: 0.875rem;
   font-weight: bold;
   color: #fff;
-  background: #0065fc
+  background: #0065fc;
   padding: 1.0625rem;
   border-radius: 0rem 0.6rem 0.6rem 0rem;
   margin-left: 0rem;
   position: relative;
   left: -4px;
   top: -2px;
+}
+/* "visible" Rechercher button text displayed as inline-block otherwise it takes up whole line*/
+#recherche-button{                           
+  display: inline-block;
+} 
+
+/*styling for Magnify Glass icon that replaces Rechercher button text on mobile devices*/
+#magnify-button img {
+  height: 50px;
+  width: 50px;
+  background: #0065fc;
+  border-radius: 0.6rem 0.6rem 0.6rem 0.6rem;
+  position: relative;
+  top: 19px;
+  left: -15px;
+  padding: 8px;
+}
+/*Magnifie Glass Icon current hidden as only used on mobile devices: see media queries*/
+#magnify-button{
+  display: none;
 }
 
 /*FILTER BUTTONS*/
@@ -181,6 +201,7 @@ label {
 /*information icon styling*/
 #info{
   align-items: center;
+
 }
 #info img{
   height: 1.563rem; /*25px*/
@@ -194,7 +215,7 @@ label {
 
 /*HEBERGEMENT & LES PLUS POPULAIRE SECTION*/
 
-/*style background for hebergement& les populaire*/
+/*style background for hebergement & les populaire*/
 article, aside{
   background: #F2F2F2;
   border-radius: 1rem;
@@ -202,44 +223,48 @@ article, aside{
 
 article{
   margin-right: 2.5rem;
+  flex-basis: 65%;
+}
+
+aside{
+  flex-basis: 25%;
 }
 
 /*HEBERGEMENT ARTICLE*/
-/*Positioning,Spacing & styling of Hebergement cards*/
 
+/*Positioning,Spacing & styling of Hebergement cards*/
 #hebergement-items{
+  list-style-type: none;
+  padding-left: 0rem;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.875rem;
+  justify-content: space-around;
+  /*gap: 1.875rem;*/
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
 
- .heberge-carte a{
-  /*short hand for flex grow, flesh shrink, flex-basis
-  cards shrink & grow. width of card is 240px but will grow to max 300px
-   flex: 1 1;*/
+ .heberge-card{
    width: 250px;
-   
    display: flex;
    flex-direction: column;
+   margin: 0.6rem;
+   padding: 0.5rem;
    border-radius: 1rem; 
    background-color: #fff;
-   padding: 0.4rem;
    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
 
 /*reposition text under heading in hebegement card*/
-.heberge-carte p{
+.heberge-card> p{
   margin-top: -0.625rem;
 }
 
 /*hebergement image styling*/
-.heberge-carte img{
+.heberge-card> img{
  /*top-left,top-right,bottom-right,bottom-left*/
  border-radius: 1rem 1rem 0rem 0rem;
- height: 115px;
  object-fit: cover;
+ height: 115px;
 }
 
 /*sizing of accomodation blue/grey star rating*/
@@ -269,7 +294,7 @@ article{
 }
 
  /*icon sizing of black graph icon*/
- .populaire-titre img{
+ .populaire-titre> img{
   height: 1rem;
   width: 1rem;
 }
@@ -277,27 +302,28 @@ article{
 /*populaire cards container*/
 #populaire-items{
   flex-direction: column;
-  gap: 1.875rem;
-  align-items: center;
+  list-style-type: none;
+  padding-left: 0rem;
   margin-top: 1.875rem;
+  gap: 1.875rem;
 }
 
 /*populaire card styling*/
-.pop-carte a{
-    width: 350px;
-    height: 135px;
-    display: flex;
-    border-radius: 1rem; 
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-    padding: 0.5rem;
+.pop-card{
+  width: 350px;
+  display: flex;
+  border-radius: 1rem; 
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+  padding: 0.5rem;
 }
 
 /*populaire image sizing etc*/
-.pop-carte img{
+.pop-card> img{
   /*top-left,top-right,bottom-right,bottom-left*/
   border-radius: 1rem  0rem 0rem 1rem;
   width: 125px;
+  height: 135px;
   margin-right: 1rem;
   object-fit: cover;
 }
@@ -309,7 +335,7 @@ article{
   justify-content: space-between;
   }
 
-.description p {
+.description> p {
     margin-top: -0.625rem;
 }
 
@@ -317,17 +343,17 @@ article{
 
 article, aside{
   padding: 1.875rem;
-
 }
 
 #activites{
   margin-top: 3.125rem;
   margin-bottom: 3.125rem;
-
 }
 
 /*activite cards container*/
 #activite-items {
+  list-style-type: none;
+  padding-left: 0rem;
   flex-direction: column;
   JUSTIFY-CONTENT: space-between;
   align-items: center;
@@ -337,8 +363,8 @@ article, aside{
   margin-top: 1.875rem;
 }
 
-/*styling of activite carte*/
-.activite-carte a{
+/*styling of activite card*/
+.activite-card{
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -346,41 +372,42 @@ article, aside{
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
 
-.activite-carte h3{
+.activite-card h3{
   padding-left: 0.625rem;
 }
 
 /*activite image styling*/
-.activite-carte img{
+ul li div img{
  /*top-left,top-right,bottom-right,bottom-left*/
  border-radius: 1rem 1rem 0rem 0rem;
  object-fit: cover;
 }
 
 /*setting the height of each activite card*/
-.activite-carte img:nth-child(1), img:nth-child(4){
+#activites li img:nth-child(1), #activites li img:nth-child(4){
   height: 397px;
 }
 
-.activite-carte:nth-child(2) img{
+#activites li:nth-child(2) img{
   height: 180px;
 }
 
-.activite-carte:nth-child(3) img{
+#activites li:nth-child(3) img{
   height: 110px;
 }
 
-.activite-carte:nth-child(5) img{
+#activites li:nth-child(5) img{
   height: 140px;
 } 
 
-.activite-carte:nth-child(6) img{
+#activites li:nth-child(6) img{
   height: 150px;
 } 
 
 /*HOVER STYLING*/
 /*hover style for ALL cards*/
-.heberge-carte a:hover, .pop-carte a:hover, .activite-carte a:hover{
+
+.heberge-card:hover, .pop-card:hover, .activite-card:hover{
   box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
 }
 
@@ -394,9 +421,7 @@ article, aside{
 {
     width: 25%;
     margin-left: 3.125rem;
-    margin-right: 3.125rem;
-    
-    
+    margin-right: 3.125rem;  
 }
 
 footer ul{
@@ -405,3 +430,20 @@ footer ul{
   line-height: 1.875rem;
 }
 
+
+
+@media all and (max-device-width: 414px)
+{
+    /* Vos règles CSS pour les mobiles ici */
+
+
+/*Change "Rechercher text to Magnify Glass in search button*/
+#magnify-button{
+  display: inline-block;
+}
+
+#recherche-button{                           
+  display: none;
+} 
+
+}
