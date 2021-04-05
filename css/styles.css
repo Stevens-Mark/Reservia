@@ -1,4 +1,4 @@
-@font-face {
+code @font-face {
   /* Définition of font called Raleway*/
   font-family: "Raleway";
   src: url("../fonts/Raleway-VariableFont_wght.ttf") format("truetype");
@@ -27,7 +27,7 @@ a{
   text-decoration: none;
 }
 
-#main, #header, #hebergements, #activites {
+#main, #header {
   max-width: 1340px;
   margin: auto;
 }
@@ -223,7 +223,7 @@ article, aside{
 
 article{
   margin-right: 2.5rem;
-  flex-basis: 65%;
+  flex-basis: 67%;
 }
 
 aside{
@@ -244,7 +244,6 @@ aside{
 }
 
  .heberge-card{
-   width: 250px;
    display: flex;
    flex-direction: column;
    margin: 0.6rem;
@@ -254,12 +253,20 @@ aside{
    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
 
+/*Hebergement card  horizontal sizing (nb: card is part of a list)*/
+  #hebergement-items li {
+    /*short hand for flex-grow,flow-shrink,flex basis: items with grow & shrink,
+    default size of card is 250px but no bigger than 375px*/
+    flex: 1 1 250px;
+    max-width: 375px;
+}
+
 /*reposition text under heading in hebegement card*/
 .heberge-card> p{
   margin-top: -0.625rem;
 }
 
-/*hebergement image styling*/
+/*hebergement image styling & sizing*/
 .heberge-card> img{
  /*top-left,top-right,bottom-right,bottom-left*/
  border-radius: 1rem 1rem 0rem 0rem;
@@ -310,12 +317,16 @@ aside{
 
 /*populaire card styling*/
 .pop-card{
-  width: 350px;
   display: flex;
   border-radius: 1rem; 
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
   padding: 0.5rem;
+}
+
+/*Populaire card  horizontal sizing (nb: card is part of a list)*/
+#populaire-items li{
+  width: 350px;
 }
 
 /*populaire image sizing etc*/
