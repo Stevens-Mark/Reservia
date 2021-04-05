@@ -455,7 +455,7 @@ footer ul{
 
 /*MEDI QUERIES*/
 
-@media all and (max-device-width: 980px){
+@media all and (max-width: 980px){
 
   /*reverse the column so populaire cards stack on top of hebergement cards*/
   #hebergements{
@@ -505,7 +505,7 @@ footer ul{
 
 /*SECOND BREAKPOINT*/
 
-@media all and (max-device-width: 620px)
+@media all and (max-width: 620px)
 {
 
   /*define hover syle*/
@@ -534,7 +534,7 @@ nav a:hover {
 
 /* BREAKPOINT MOBILE PHONES*/
 
-@media all and (max-device-width: 414px)
+@media all and (max-width: 414px)
 {
  /*Hide "Rechercher text in Search button*/
   #recherche-button{                           
