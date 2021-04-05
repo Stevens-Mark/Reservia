@@ -1,4 +1,4 @@
-code @font-face {
+ @font-face {
   /* Définition of font called Raleway*/
   font-family: "Raleway";
   src: url("../fonts/Raleway-VariableFont_wght.ttf") format("truetype");
@@ -369,7 +369,7 @@ article, aside{
 	justify-content: space-between;
 	align-content: space-evenly;
 	flex-wrap: wrap;
-	height: 100px;
+	height: 500px;
 	margin-top: 1.875rem;
 }
 
@@ -447,49 +447,50 @@ footer ul{
   line-height: 1.875rem;
 }
 
-@media all and (max-device-width: 930px){
+@media all and (max-device-width: 980px){
 
-  #hebergements{
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  aside{
-    flex-basis: 100%;
+    #hebergements{
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    aside{
+      flex-basis: 100%;
+    }
+
+    article {
+      margin-right: 0rem;
   }
 
+  /*new styling for activite cards*/
+  #activite-items {
+    height: 1000px;
+  }
+
+  .activite-card {
+    margin: 20px;
+  }
+
+  #activite-items li{
+      width: 45%;
+  }
+}
+
+@media all and (max-device-width: 620px)
+{
+
+  /*change padding so that Hebergement section aligns with Activite cards*/
   article {
-    margin-right: 0rem;
-}
+    padding: 10px;
+  }
 
-/*new styling for activite cards*/
-#activite-items {
-  height: 1000px;
-}
+  /*new styling for activite cards*/
+  #activite-items {
+    height: 2000px;
+  }
 
-.activite-card {
-  margin: 20px;
-}
-
-#activite-items li{
-    width: 45%;
-}
-  
-@media all and (max-device-width: 620px){
-
-
-/*change padding so that Hebergement section aligns with Activite cards*/
-article {
-  padding: 10px;
-}
-
-/*new styling for activite cards*/
-#activite-items {
-  height: 2000px;
-}
-
-/*make activite card span whole width*/
-#activite-items li{
-    width: 100%;
+  /*make activite card span whole width*/
+  #activite-items li{
+      width: 100%;
 }
 
 } /*end of media querie for medium size screens*/
@@ -497,24 +498,23 @@ article {
 
         /*MOBILE PHONES*/
 
-@media all and (max-device-width: 414px){
-    /* Vos règles CSS pour les mobiles ici */
+@media all and (max-device-width: 414px)
+{
+    
 
-/*Change "Rechercher text to Magnify Glass in search button*/
-#magnify-button{
-  display: inline-block;
-}
+  /*Change "Rechercher text to Magnify Glass in search button*/
+  #magnify-button{
+    display: inline-block;
+  }
 
-#recherche-button{                           
-  display: none;
-} 
+  #recherche-button{                           
+    display: none;
+  } 
 
-/*remove background color & resize for Hebergement section*/
-article {
-      padding: 10px;
-      background: #fff;
-}
-
-
+  /*remove background color & resize for Hebergement section*/
+  article {
+        padding: 10px;
+        background: #fff;
+  }
 
 }
