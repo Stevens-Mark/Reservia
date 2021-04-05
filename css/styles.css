@@ -69,10 +69,14 @@ nav ul {
   padding-left: 0rem;
 }
 
+nav li{
+  padding-top: 0.5rem;
+}
+
 /* navigation spacing & remove underline*/
 nav a {
   font-size: 0.9rem;
-  margin-right: 3rem;
+  margin-right: 4rem;
 }
 
 /* set colour of last link "inscrire" to blue & bold instead of black*/
@@ -85,7 +89,7 @@ nav li:nth-child(3) a{
 nav a:hover {
   color: #0065fc;
   border-top: 0.1rem solid #0065fc;
-  padding-top: 1rem;
+  padding-top: 1.9rem;
 }
 
 /*MAIN*/
@@ -201,16 +205,16 @@ input[type="text"] {
 /*information icon styling*/
 #info{
   align-items: center;
-
 }
-#info img{
-  height: 1.563rem; /*25px*/
-  width: 1.563rem;
+
+#info img {
+  height: 30px;
+  width: 30px;
   padding: 4px;
-  margin-right: 0.625rem;
+  margin-right: 5px;
   border-radius: 50%;
   background: #ffff;
-  border: 2px solid #f2f2f2; 
+  border: 2px solid #f2f2f2;
 }
 
 /*HEBERGEMENT & LES PLUS POPULAIRE SECTION*/
@@ -238,7 +242,6 @@ aside{
   padding-left: 0rem;
   flex-wrap: wrap;
   justify-content: space-around;
-  /*gap: 1.875rem;*/
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
@@ -256,9 +259,9 @@ aside{
 /*Hebergement card  horizontal sizing (nb: card is part of a list)*/
   #hebergement-items li {
     /*short hand for flex-grow,flow-shrink,flex basis: items with grow & shrink,
-    default size of card is 250px but no bigger than 375px*/
+    default size of card is 250px but no bigger than 380px*/
     flex: 1 1 250px;
-    max-width: 375px;
+    max-width: 380px;
 }
 
 /*reposition text under heading in hebegement card*/
@@ -298,6 +301,7 @@ aside{
  .populaire-titre{
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
  /*icon sizing of black graph icon*/
@@ -436,9 +440,10 @@ ul li div img{
 {
   width: 25%;
   margin-left: 3.125rem;
-  margin-right: 1.25rem;
+  margin-right: 2.5rem;
   flex: auto; 
-  /*sized according to its width and height properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container*/
+  /*sized according to its width and height properties, but grows to absorb any extra free space in the flex container,
+  and shrinks to its minimum size to fit the container*/
 }
 
 footer ul{
@@ -447,74 +452,106 @@ footer ul{
   line-height: 1.875rem;
 }
 
+
+/*MEDI QUERIES*/
+
 @media all and (max-device-width: 980px){
 
-    #hebergements{
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-    aside{
-      flex-basis: 100%;
-    }
-
-    article {
-      margin-right: 0rem;
+  /*reverse the column so populaire cards stack on top of hebergement cards*/
+  #hebergements{
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
-  /*new styling for activite cards*/
+  /*remove margin than seperated hebergement & populaire cards*/
+  article {
+    margin-right: 0rem;
+  }
+  
+    /*The populaire cards extend in width to take up the full column*/
+  aside{
+    width: 100%;
+  }
+
+  #populaire-items{
+    align-items: center;
+   }
+
+  #populaire-items li{
+    width: 500px;
+  }
+
+  /*remove round edges from borders*/
+  article, aside{
+    border-radius: 0rem;
+  }
+
+  /*ACTIVITE CARDS*/
+
+  /*new styling for activite cards: 2 times the height so all cards fit in two columns*/
   #activite-items {
     height: 1000px;
   }
 
   .activite-card {
-    margin: 20px;
+    margin: 10px;
   }
-
+  
+  /* increase the width of a cardto 45% , instead of 25%each so two cards fit neatly in two columns*/
   #activite-items li{
       width: 45%;
   }
-}
+}/*end of first breakpoint*/
+
+/*SECOND BREAKPOINT*/
 
 @media all and (max-device-width: 620px)
 {
 
+  /*define hover syle*/
+nav a:hover {
+  border-top: none;
+  border-bottom: 0.1rem solid #0065fc;
+  
+}
   /*change padding so that Hebergement section aligns with Activite cards*/
   article {
     padding: 10px;
   }
 
-  /*new styling for activite cards*/
+  /*new styling for activite cards: 4 times the height so all cards fit in one columns*/
   #activite-items {
     height: 2000px;
   }
 
-  /*make activite card span whole width*/
+  /*make activite card span 810% of width so they don't distort too much*/
   #activite-items li{
-      width: 100%;
+      width: 80%;
 }
 
-} /*end of media querie for medium size screens*/
+} /*end of second breakpoint*/
 
 
-        /*MOBILE PHONES*/
+/* BREAKPOINT MOBILE PHONES*/
 
 @media all and (max-device-width: 414px)
 {
-    
-
-  /*Change "Rechercher text to Magnify Glass in search button*/
-  #magnify-button{
-    display: inline-block;
-  }
-
+ /*Hide "Rechercher text in Search button*/
   #recherche-button{                           
     display: none;
   } 
 
+  /*Replace text with Magnify Logo instead*/
+  #magnify-button{
+    display: inline-block;
+
+  }
   /*remove background color & resize for Hebergement section*/
   article {
-        padding: 10px;
         background: #fff;
   }
 
-}
+  #activites {
+    margin-top: 1rem;
+  }
+}/*end of MOBILE breakpoint*/
