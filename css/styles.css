@@ -363,26 +363,30 @@ article, aside{
 
 /*activite cards container*/
 #activite-items {
-  list-style-type: none;
-  padding-left: 0rem;
-  flex-direction: column;
-  JUSTIFY-CONTENT: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 450px;
-  gap: 2.813rem; /*45px*/
-  margin-top: 1.875rem;
+	list-style-type: none;
+	padding-left: 0rem;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: space-evenly;
+	flex-wrap: wrap;
+	height: 100px;
+	margin-top: 1.875rem;
 }
 
 /*styling of activite card*/
 .activite-card{
   display: flex;
   flex-direction: column;
-  width: 300px;
+  margin: 1.25rem;
   border-radius: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
 
+/*Activite card  horizontal sizing (nb: card is part of a list)*/
+  #activite-items li {
+    width: 25.75%;
+    
+}
 .activite-card h3{
   padding-left: 0.625rem;
 }
@@ -396,23 +400,23 @@ ul li div img{
 
 /*setting the height of each activite card*/
 #activites li img:nth-child(1), #activites li img:nth-child(4){
-  height: 397px;
+  height: 410px;
 }
 
 #activites li:nth-child(2) img{
-  height: 180px;
+  height: 195px;
 }
 
 #activites li:nth-child(3) img{
-  height: 110px;
+  height: 120px;
 }
 
 #activites li:nth-child(5) img{
-  height: 140px;
+  height: 155px;
 } 
 
 #activites li:nth-child(6) img{
-  height: 150px;
+  height: 160px;
 } 
 
 /*HOVER STYLING*/
@@ -430,9 +434,11 @@ ul li div img{
 }
 #a-propos, #nos-hébergements, #assistance
 {
-    width: 25%;
-    margin-left: 3.125rem;
-    margin-right: 3.125rem;  
+  width: 25%;
+  margin-left: 3.125rem;
+  margin-right: 1.25rem;
+  flex: auto; 
+  /*sized according to its width and height properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container*/
 }
 
 footer ul{
@@ -441,12 +447,58 @@ footer ul{
   line-height: 1.875rem;
 }
 
+@media all and (max-device-width: 930px){
+
+  #hebergements{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  aside{
+    flex-basis: 100%;
+  }
+
+  article {
+    margin-right: 0rem;
+}
+
+/*new styling for activite cards*/
+#activite-items {
+  height: 1000px;
+}
+
+.activite-card {
+  margin: 20px;
+}
+
+#activite-items li{
+    width: 45%;
+}
+  
+@media all and (max-device-width: 620px){
 
 
-@media all and (max-device-width: 414px)
-{
+/*change padding so that Hebergement section aligns with Activite cards*/
+article {
+  padding: 10px;
+}
+
+/*new styling for activite cards*/
+#activite-items {
+  height: 2000px;
+}
+
+/*make activite card span whole width*/
+#activite-items li{
+    width: 100%;
+}
+
+} /*end of media querie for medium size screens*/
+
+
+        /*MOBILE PHONES*/
+
+@media all and (max-device-width: 414px){
     /* Vos règles CSS pour les mobiles ici */
-
 
 /*Change "Rechercher text to Magnify Glass in search button*/
 #magnify-button{
@@ -456,5 +508,13 @@ footer ul{
 #recherche-button{                           
   display: none;
 } 
+
+/*remove background color & resize for Hebergement section*/
+article {
+      padding: 10px;
+      background: #fff;
+}
+
+
 
 }
