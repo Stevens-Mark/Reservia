@@ -168,7 +168,7 @@ input[type="text"] {
 
 /*defining general shape of filtre button that surrounds text*/
 .filtre-btn {
-  position: relative;
+  /*position: relative;*/
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -198,7 +198,6 @@ input[type="text"] {
 
 .filtre-btn:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
-  /*box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);*/
   /* x,y,blur,spread*/
 }
 
@@ -334,7 +333,7 @@ aside{
 /*Populaire card  horizontal sizing (nb: card is part of a list)*/
 #populaire-items li{
     /*short hand for flex-grow,flow-shrink,flex basis: items with grow & shrink,
-  default size of card is 250px but no bigger than 380px*/
+  default size of card is 250px but no bigger than 443px*/
   flex: 1 1 250px;
   max-width: 443px;
   min-width: 350px;
@@ -397,6 +396,7 @@ article, aside{
   #activite-items li {
     width: 25.75%;
     
+/*aligining heading in activite card*/    
 }
 .activite-card h3{
   padding-left: 0.625rem;
@@ -480,11 +480,14 @@ footer ul{
     width: 100%;
   }
 
-   /*remove round edges from borders*/
-  article, aside{
-    border-radius: 0rem;
+   /*alter borders edges*/
+  article{
+  /*top-left,top-right,bottom-right,bottom-left*/
+    border-radius: 0rem 0rem 1rem 1rem;
   }
-
+  aside{
+    border-radius: 1rem 1rem 0rem 0rem
+  }
   /*ACTIVITE CARDS*/
 
   /*new styling for activite cards: 2 times the height so all cards fit in two columns*/
@@ -535,9 +538,9 @@ nav a:hover {
     height: 2000px;
   }
 
-  /*make activite card span 810% of width so they don't distort too much*/
+  /*make activite card span  width to align with above sections*/
   #activite-items li{
-      width: 80%;
+      width: 100%;
 }
 
 } /*end of second breakpoint*/
@@ -555,10 +558,11 @@ body{
   #filter, #header {
     margin: 20px;
   }
-
+/*to force the filter buttons down to next line*/
   .filtre-title {
     margin-right: 7.5rem;
   }
+
  /*Hide "Rechercher text in Search button*/
   #recherche-button{                           
     display: none;
