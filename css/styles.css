@@ -27,7 +27,7 @@ a{
   text-decoration: none;
 }
 
-#main, #header, #hebergements, #activites {
+#main, #header {
   max-width: 1340px;
   margin: auto;
 }
@@ -58,6 +58,7 @@ h3 {
 /*Logo & Navigation*/
 #header {
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 /* Navigation*/
@@ -71,12 +72,11 @@ nav ul {
 
 /* navigation spacing & remove underline*/
 nav a {
-  font-size: 0.9rem;
-  margin-right: 3rem;
+   margin-right: 3rem;
 }
 
-/* set colour of last link "inscrire" to blue & bold instead of black*/
-nav li:nth-child(3) a{
+/* set colour of "last" link "inscrire" to blue & bold instead of black*/
+nav li:last-child a{
   color:#0065fc; 
   font-weight: bolder;
 }
@@ -85,7 +85,7 @@ nav li:nth-child(3) a{
 nav a:hover {
   color: #0065fc;
   border-top: 0.1rem solid #0065fc;
-  padding-top: 1rem;
+  padding-top: 1.4rem;
 }
 
 /*MAIN*/
@@ -101,13 +101,13 @@ nav a:hover {
     position: relative;
     top: 1.185rem;
     right: -5px;
-    padding: 0.625rem;
+    padding: 015px;
   }
 
 /*styling for input field of rechercher button*/
 input[type="text"] {
   height: 3.125rem;
-  width: 12.5rem;
+  width: 14rem;
   border: 0.15rem solid #f2f2f2;
   font-size: 1.125rem;
 }
@@ -117,7 +117,7 @@ label {
   font-size: 0.875rem;
   font-weight: bold;
   color: #fff;
-  background: #0065fc
+  background: #0065fc;
   padding: 1.0625rem;
   border-radius: 0rem 0.6rem 0.6rem 0rem;
   margin-left: 0rem;
@@ -126,13 +126,36 @@ label {
   top: -2px;
 }
 
+/* "visible" Rechercher button text displayed as inline-block otherwise it takes up whole line*/
+#recherche-button{                           
+  display: inline-block;
+} 
+
+/*styling for Magnify Glass icon that replaces Rechercher button text on mobile devices*/
+#magnify-button img {
+	height: 50px;
+	width: 50px;
+	background: #0065fc;
+	border-radius: 19px;
+	position: relative;
+	top: 19px;
+	left: -26px;
+	padding: 12px;
+}
+/*Magnifie Glass Icon current hidden as only used on mobile devices: see media queries*/
+#magnify-button{
+  display: none;
+}
+
+
 /*FILTER BUTTONS*/
 
 /*align filtre-title & buttons*/
 #filter-buttons-items {
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 1.875rem;
+  gap: 1.5625rem;
 }
 
 .filtre-title {
@@ -142,7 +165,6 @@ label {
 
 /*defining general shape of filtre button that surrounds text*/
 .filtre-btn {
-  position: relative;
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -151,14 +173,11 @@ label {
   border: 0.1rem solid #f2f2f2;
   background: #fff;
   font-weight: bold;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
 }
 
 /*aligning text in filtre button*/
 .filtre-btn p{
     padding: 0.625rem;
-    text-align: center;
 }
 
 /*Styling (eg, circle) & position for icon in filtre button*/
@@ -167,14 +186,13 @@ label {
     width: 2.5rem;
     background: #deebff;
     border-radius: 50%;
-    padding: 6px;
+    padding: 0.625rem;
     position: relative;
     left: -1px;
 }
 
 .filtre-btn:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
-  /*box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);*/
   /* x,y,blur,spread*/
 }
 
@@ -182,14 +200,15 @@ label {
 #info{
   align-items: center;
 }
-#info img{
-  height: 1.563rem; /*25px*/
-  width: 1.563rem;
-  padding: 4px;
+
+#info img {
+  height: 1.875rem;
+  width: 1.875rem;
+  padding: 6px;
   margin-right: 0.625rem;
   border-radius: 50%;
   background: #ffff;
-  border: 2px solid #f2f2f2; 
+  border: 2px solid #f2f2f2;
 }
 
 /*HEBERGEMENT & LES PLUS POPULAIRE SECTION*/
@@ -200,42 +219,55 @@ article, aside{
   border-radius: 1rem;
 }
 
+/*setting width ratio between hebergement & populaire sections flex-grow*/
 article{
   margin-right: 2.5rem;
+  flex: 2;
 }
+
+aside{
+  flex: 1;
+}
+
 
 /*HEBERGEMENT ARTICLE*/
 /*Positioning,Spacing & styling of Hebergement cards*/
 
+/*Positioning,Spacing & styling of Hebergement cards*/
 #hebergement-items{
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.875rem;
+  list-style-type: none;
+  gap: 1.5625rem;
+  padding-left: 0rem;
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
 
- .heberge-carte a{
+.heberge-card{
   /*short hand for flex grow, flesh shrink, flex-basis
-  cards shrink & grow. width of card is 240px but will grow to max 300px
-   flex: 1 1;*/
-   width: 250px;
-   
-   display: flex;
-   flex-direction: column;
-   border-radius: 1rem; 
-   background-color: #fff;
-   padding: 0.4rem;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+  cards shrink & grow. width of card is 240px but will grow to max 380px*/
+  flex: 1 1 240px;
+  max-width: 380px;
+
+}
+ .heberge-card a {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem; 
+  background-color: #fff;
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+
 }
 
 /*reposition text under heading in hebegement card*/
-.heberge-carte p{
+.heberge-card p{
   margin-top: -0.625rem;
 }
 
 /*hebergement image styling*/
-.heberge-carte img{
+.heberge-card>a>img{
  /*top-left,top-right,bottom-right,bottom-left*/
  border-radius: 1rem 1rem 0rem 0rem;
  height: 115px;
@@ -263,41 +295,50 @@ article{
 /*Positioning/Spacing & styling of Populaire cards */
 
  /* for title*/
- .populaire-titre{
+ .popular-title{
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
  /*icon sizing of black graph icon*/
- .populaire-titre img{
+ .popular-title img{
   height: 1rem;
   width: 1rem;
 }
 
-/*populaire cards container*/
-#populaire-items{
-  flex-direction: column;
-  gap: 1.875rem;
-  align-items: center;
+/*popular cards container*/
+#popular-items{
+  flex-wrap: wrap;
+  padding-left: 0rem;
   margin-top: 1.875rem;
+  gap: 1.5625rem;
 }
 
-/*populaire card styling*/
-.pop-carte a{
-    width: 350px;
-    height: 135px;
-    display: flex;
-    border-radius: 1rem; 
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-    padding: 0.5rem;
+/*Popular card horizontal sizing*/
+/*short hand for flex-grow,flow-shrink,flex basis: items with grow & shrink,
+but no smaller than 325px*/
+.pop-card{
+flex: 1 1;
+min-width: 325px;
 }
 
-/*populaire image sizing etc*/
-.pop-carte img{
+/*popular card styling*/
+.pop-card a{
+  display: flex;
+  border-radius: 1rem; 
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+  padding: 0.5rem;
+
+}
+
+/*popular image sizing etc*/
+.pop-card img{
   /*top-left,top-right,bottom-right,bottom-left*/
   border-radius: 1rem  0rem 0rem 1rem;
   width: 125px;
+  height: 135px;
   margin-right: 1rem;
   object-fit: cover;
 }
@@ -316,71 +357,71 @@ article{
 /*ACTIVITES SECTION*/
 
 article, aside{
-  padding: 1.875rem;
+  padding: 1.5625rem;
 
 }
 
 #activites{
   margin-top: 3.125rem;
   margin-bottom: 3.125rem;
-
 }
 
 /*activite cards container*/
 #activite-items {
-  flex-direction: column;
-  JUSTIFY-CONTENT: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 450px;
-  gap: 2.813rem; /*45px*/
-  margin-top: 1.875rem;
+	padding-left: 0rem;
+  /*shorthand for flex direction & flex-wrap*/
+	flex-flow: column wrap;
+	justify-content: space-between;
+	align-content: space-evenly;
+	height: 525px;
+	margin-top: 1.875rem;
 }
 
 /*styling of activite carte*/
-.activite-carte a{
+.activite-card a{
   display: flex;
   flex-direction: column;
   width: 300px;
   border-radius: 1rem;
+  margin: 1.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
 
-.activite-carte h3{
+.activite-card h3{
   padding-left: 0.625rem;
 }
 
 /*activite image styling*/
-.activite-carte img{
+.activite-card img{
  /*top-left,top-right,bottom-right,bottom-left*/
  border-radius: 1rem 1rem 0rem 0rem;
  object-fit: cover;
 }
 
 /*setting the height of each activite card*/
-.activite-carte img:nth-child(1), img:nth-child(4){
-  height: 397px;
+.activite-card img:nth-child(1), img:nth-child(4){
+  height: 436px;
 }
 
-.activite-carte:nth-child(2) img{
-  height: 180px;
+.activite-card:nth-child(2) img{
+  height: 195px;
 }
 
-.activite-carte:nth-child(3) img{
-  height: 110px;
+.activite-card:nth-child(3) img{
+  height: 130px;
 }
 
-.activite-carte:nth-child(5) img{
-  height: 140px;
+.activite-card:nth-child(5) img{
+  height: 150px;
 } 
 
-.activite-carte:nth-child(6) img{
-  height: 150px;
+.activite-card:nth-child(6) img{
+  height: 180px;
 } 
 
 /*HOVER STYLING*/
 /*hover style for ALL cards*/
-.heberge-carte a:hover, .pop-carte a:hover, .activite-carte a:hover{
+.heberge-card a:hover, .pop-card a:hover, .activite-carte a:hover{
   box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
 }
 
@@ -388,16 +429,14 @@ article, aside{
 
 #footer{
   flex-wrap: wrap;
- 
 }
-#a-propos, #nos-hébergements, #assistance
-{
-    width: 25%;
-    margin-left: 3.125rem;
-    margin-right: 3.125rem;
-    
-    
-}
+
+#about, #accommodation, #assistance{
+  margin-left: 3.125rem;
+  margin-right: 3.125rem;
+  flex: auto; 
+  /*sized according to its width and height properties, but grows to absorb any extra free space in the flex container,  and shrinks to its minimum size to fit the container*/
+}  
 
 footer ul{
   list-style-type: none;
