@@ -13,7 +13,7 @@
 }
 
 /* HEADER */
-/* Eléments principaux de la page */
+/* Main elements of the page */
 html,
 body {
   height: 100%;
@@ -92,8 +92,8 @@ nav a:hover {
 
 /*SEARCH BUTTON */
 
-/*icon sizing & position leftside of rechercher button*/
-.recherche-button img {
+/*icon sizing & position leftside of search button*/
+#place-logo  {
     height: 3.125rem;
     width: 3.125rem;
     background: #f2f2f2;
@@ -104,7 +104,7 @@ nav a:hover {
     padding: 015px;
   }
 
-/*styling for input field of rechercher button*/
+/*styling for input field of search button*/
 input[type="text"] {
   height: 3.125rem;
   width: 14rem;
@@ -112,7 +112,7 @@ input[type="text"] {
   font-size: 1.125rem;
 }
 
-/*styling for right side of rechercher button in blue*/
+/*styling for right side of search button in blue*/
 label {
   font-size: 0.875rem;
   font-weight: bold;
@@ -126,8 +126,8 @@ label {
   top: -2px;
 }
 
-/* "visible" Rechercher button text displayed as inline-block otherwise it takes up whole line*/
-#recherche-button{                           
+/* "visible" search button text displayed as inline-block otherwise it takes up whole line*/
+#search-button{                           
   display: inline-block;
 } 
 
@@ -150,7 +150,7 @@ label {
 
 /*FILTER BUTTONS*/
 
-/*align filtre-title & buttons*/
+/*align filter-title & buttons*/
 #filter-buttons-items {
   align-items: center;
   flex-wrap: wrap;
@@ -158,13 +158,13 @@ label {
   gap: 1.5625rem;
 }
 
-.filtre-title {
+.filter-title {
   font-weight: bold;
   margin-right: 0.5rem;
 }
 
 /*defining general shape of filtre button that surrounds text*/
-.filtre-btn {
+.filter-btn {
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -175,13 +175,13 @@ label {
   font-weight: bold;
 }
 
-/*aligning text in filtre button*/
-.filtre-btn p{
+/*aligning text in filter button*/
+.filter-btn p{
     padding: 0.625rem;
 }
 
-/*Styling (eg, circle) & position for icon in filtre button*/
-.filtre-btn img {
+/*Styling (eg, circle) & position for icon in filter button*/
+.filter-btn img {
     height: 2.5rem;
     width: 2.5rem;
     background: #deebff;
@@ -191,7 +191,7 @@ label {
     left: -1px;
 }
 
-.filtre-btn:hover {
+.filter-btn:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
   /* x,y,blur,spread*/
 }
@@ -219,7 +219,7 @@ article, aside{
   border-radius: 1rem;
 }
 
-/*setting width ratio between hebergement & populaire sections flex-grow*/
+/*setting width ratio between hebergement & les populaire sections flex-grow*/
 article{
   margin-right: 2.5rem;
   flex: 2;
@@ -231,9 +231,9 @@ aside{
 
 
 /*HEBERGEMENT ARTICLE*/
-/*Positioning,Spacing & styling of Hebergement cards*/
+ 
 
-/*Positioning,Spacing & styling of Hebergement cards*/
+/*Positioning, Spacing & styling of Hebergement cards*/
 #hebergement-items{
   flex-wrap: wrap;
   justify-content: center;
@@ -292,7 +292,7 @@ aside{
 }
 
  /*LES PLUS POPULAIRE ASIDE*/
-/*Positioning/Spacing & styling of Populaire cards */
+/*Positioning, Spacing & styling of Popular cards */
 
  /* for title*/
  .popular-title{
@@ -377,7 +377,7 @@ article, aside{
 	margin-top: 1.875rem;
 }
 
-/*styling of activite carte*/
+/*styling of activity card*/
 .activite-card a{
   display: flex;
   flex-direction: column;
@@ -391,14 +391,14 @@ article, aside{
   padding-left: 0.625rem;
 }
 
-/*activite image styling*/
+/*activity image styling*/
 .activite-card img{
  /*top-left,top-right,bottom-right,bottom-left*/
  border-radius: 1rem 1rem 0rem 0rem;
  object-fit: cover;
 }
 
-/*setting the height of each activite card*/
+/*setting the height of each activity card*/
 .activite-card img:nth-child(1), img:nth-child(4){
   height: 436px;
 }
