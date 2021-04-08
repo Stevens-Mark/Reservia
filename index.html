@@ -13,7 +13,7 @@
 <body>
 	
 <header id="header" class="d-flex">
-		<img src="images/logo/Reservia.svg" alt="Reservia_logo" title="Reservia Logo">
+		<img id="reservia-logo" src="images/logo/Reservia.svg" alt="Reservia_logo" title="Reservia Logo">
 		<nav><!--Nav droit-->
 			<ul>
 				<li><a href="#hebergement">Hébergements</a></li>
@@ -25,26 +25,24 @@
     
 <main id="main">
 	<section id="filter">
-		<h1>Trouvez votre hébergements pour des vacances de rêve</h1>
+		<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 		<p>En plein centre ville ou en pleine nature</p>
 		
 		<!--search button: -->
 		<div class="search-button">
-			<form method="post" action="#">
+			<form class="d-flex" method="post" action="#">
 				<img id="place-logo" src="images/icon/map-marker-alt-solid.svg" alt="Icon" title="Icon">
 				<input type="text" name="ville-research" id="ville-research" placeholder="Ex: Marseille, France" >
 				<label  for="ville-research">
-					<span id="recherche-button">Rechercher</span>
-						<!--Alternative Magnify Glass button fro mobile devices: -->
-					<span id="magnify-button"><img  src="images/icon/search-solid-white.svg" alt="Magnify-glass-Logo"></span>
-				</label>
+					<span id="text-button">Rechercher</span></label>
+					<span id="magnify-button"><img  src="images/icon/search-solid-white.svg" alt="Magnify-glass-Logo"></span>			<!--Alternative Magnify Glass button fro mobile devices: -->
 			</form>
 		</div>
 		
 											<!-- 5 buttons filters: --> 
 		<div id="filter-buttons-items" class="d-flex">
 
-			<p class="filter-title">Filtres</p>
+			<h3 class="filter-title">Filtres</h3>
 
 			<div class="filter-btn">
 					<img src="images/icon/money-bill-wave-solid.svg" alt="Icon" title="Icon">
@@ -87,82 +85,108 @@
 							<!--Hébergement Card 1-->			
 				<div class="heberge-card"><a href="#">
 					<img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Hebergement" title="Hebergement">
-					<h3>Auberge la Cannebière</h3>
-					<p>Nuit à partir de 25€</p>
+					<div class="description">
+						<div>
+							<h3>Auberge la Cannebière</h3>
+							<p>Nuit à partir de <strong>25€</strong></p>
+						</div>
 						<div class="rating"><!--star rating-->
 							<span class="star-blue"></span>
 							<span class="star-blue"></span> 
 							<span class="star-blue"></span> 
 							<span class="star-blue"></span> 
 							<span class="star-grey"></span>
-						</div></a>	
+						</div>
+					</div></a>	
 				</div>	
 								<!--Hébergement Card 2-->		
 				<div class="heberge-card"><a href="#">
 					<img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hebergement" title="Hebergement">
-					<h3>Hôtel du port</h3>
-					<p>Nuit à partir de 52€</p>
+					<div class="description">
+						<div>
+							<h3>Hôtel du port</h3>
+							<p>Nuit à partir de <strong>52€</strong></p>
+						</div>
 						<div class="rating"><!--star rating-->
 							<span class="star-blue"></span>
 							<span class="star-blue"></span>
 							<span class="star-blue"></span> 
 							<span class="star-blue"></span>
 							<span class="star-blue"></span>
-						</div></a>
+						</div>	
+					</div></a>
 				</div>
 								<!--Hébergement Card 3-->			
 				<div class="heberge-card"><a href="#">
 					<img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hebergement" title="Hebergement">
-					<h3>Hôtel Les mouettes</h3>
-					<p>Nuit à partir de 76€</p>	
+					<div class="description">
+						<div>
+							<h3>Hôtel Les mouettes</h3>
+							<p>Nuit à partir de <strong>76€</strong></p>
+						</div>
 						<div class="rating"><!--star rating-->
 							<span class="star-blue"></span>
 							<span class="star-blue"></span> 
 							<span class="star-blue"></span> 
 							<span class="star-blue"></span> 
 							<span class="star-grey"></span> 
-						</div></a>
+						</div>
+					</div></a>
 				</div>
 								<!--Hébergement Card 4-->			
 				<div class="heberge-card"><a href="#">
 					<img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hebergement" title="Hebergement">
-					<h3>Hötel de la mer</h3>
-					<p>Nuit à partir de 46€</p>						
+					<div class="description">
+						<div>		
+							<h3>Hötel de la mer</h3>
+							<p>Nuit à partir de <strong>46€</strong></p>
+						</div>
 						<div class="rating"><!--star rating-->
 							<span class="star-blue"></span>
 							<span class="star-blue"></span> 
 							<span class="star-blue"></span> 
 							<span class="star-grey"></span>
 							<span class="star-grey"></span>
-						</div></a>
+						</div>	
+					</div></a>
 				</div>
 							<!--Hébergement Card 5-->			
 				<div class="heberge-card"><a href="#">
-					<img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Hebergement" title="Hebergement">	
-					<h3>Auberge Le Panier</h3>
-					<p>Nuit à partir de 23€</p>						
+					<img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<div class="description">
+						<div>
+							<h3>Auberge Le Panier</h3>
+							<p>Nuit à partir de <strong>23€</strong></p>	
+						</div>
 						<div class="rating"><!--star rating-->
 							<span class="star-blue"></span>
 							<span class="star-blue"></span>
 							<span class="star-blue"></span> 
 							<span class="star-blue"></span>
 							<span class="star-grey"></span> 
-				 		</div></a>
+						</div>
+				 	</div></a>
 			 	</div>
 							<!--Hébergement Card 6-->			
 				<div class="heberge-card"><a href="#">
-					<img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hebergement" title="Hebergement">	<h3>Hötel chez Amina</h3>
-					<p>Nuit à partir de 96€</p>			
+					<img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<div class="description">
+						<div>
+							<h3>Hötel chez Amina</h3>
+							<p>Nuit à partir de <strong>96€</strong></p>
+						</div>
 						<div class="rating"><!--star rating-->
 							<span class="star-blue"></span>
 							<span class="star-blue"></span> 
 							<span class="star-blue"></span>
 							<span class="star-blue"></span>
 							<span class="star-blue"></span>
-						</div></a> 
+						</div>
+					</div></a> 
 				</div>
+
 			</div>  		<!--end of Hébergement cards block -->
-			<h3>Afficher plus</h3>		          
+			<a href="#"><h3>Afficher plus</h3></a> 		          
 		</article>  		<!--END: Article: Hébergements -->
 
 		<aside > 		<!--Aside:les plus populaire -->
@@ -180,7 +204,7 @@
 					<div class="description">
 						<div>
 							<h3>Hôtel Le soleil du matin</h3>
-							<p>Nuit à partir de 128€</p>
+							<p>Nuit à partir de <strong>128€</strong></p>
 						</div>
 						<div class="rating"><!--star rating-->
 							<span class="star-blue"></span>
@@ -197,7 +221,7 @@
 					<div class="description">
 						<div>
 						   <h3>Au coeur de l'eau Chambres d'hôtes</h3>
-							<p>Nuit à partir de 71€</p>
+							<p>Nuit à partir de <strong>71€</strong></p>
 						</div>
 						<div class="rating"><!--star rating-->
 							<span class="star-blue"></span>
@@ -214,7 +238,7 @@
 					<div class="description">
 						<div>
 						   <h3>Hôtel Tout bleu et Blanc</h3>
-							<p>Nuit à partir de 58€</p>
+							<p>Nuit à partir de <strong>58€</strong></p>
 						</div>
 						<div class="rating">
 							<span class="star-blue"></span>
@@ -229,39 +253,37 @@
 		</aside><!--END: Aside:les plus populaire -->
 	</section> <!--END:Section contains Hebergement article & populaire aside --> 
 
-	<section id="activites">
+	<section id="activities">
 		<h2>Activités à Marseille</h2>
-
-					<!--start of activite cards block -->
-		<div id="activite-items" class="d-flex">
-
-			<!--Activite Card Vieux Port-->
-			<div  class="activite-card"><a href="#">
+					<!--start of activity cards block -->
+		<div id="activity-items" class="d-flex">
+			<!--Activity Card Vieux Port-->
+			<div  class="activity-card"><a href="#">
 				<img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" title="Activités">
 				<h3>Vieux Port</h3></a>
 			</div>
- 		   <!--Activite Card Fort de Pomégues-->
-			<div class="activite-card"><a href="#">
+ 		   <!--Activity Card Fort de Pomégues-->
+			<div class="activity-card"><a href="#">
 				<img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomégues">
-				<h3>Fort de Pomégues</h3></a>
+				<h3>Fort de Pomègues</h3></a>
 			</div>
-			<!--Activite Card Iles du Frioul-->
-			<div class="activite-card"><a href="#">
+			<!--Activity Card Iles du Frioul-->
+			<div class="activity-card"><a href="#">
 				<img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Iles du Frioul">
-				<h3>Iles du Frioul</h3></a>
+				<h3>Îles du Frioul</h3></a>
 			</div>
- 			<!--Activite Card Parc National des Calangues-->
-			<div class="activite-card"><a href="#">
+ 			<!--Activity Card Parc National des Calangues-->
+			<div class="activity-card"><a href="#">
 				<img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calangues">
 				<h3>Parc National des Calangues</h3></a>
 			</div>
-			<!--Activite Card Notre-Dame-de-la-Garde-->
-			<div class="activite-card"><a href="#">
+			<!--Activity Card Notre-Dame-de-la-Garde-->
+			<div class="activity-card"><a href="#">
 				<img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde">
 				<h3>Notre-Dame-de-la-Garde</h3></a>
 			</div>
-			<!--Activite Card Parc Longchamp-->
-			<div class="activite-card"><a href="#">
+			<!--Activity Card Parc Longchamp-->
+			<div class="activity-card"><a href="#">
 				<img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp">
 				<h3>Parc Longchamp</h3></a>
 			</div>
