@@ -151,6 +151,8 @@ label {
 	background: #0065fc;
 	border-radius: 19px;
 	padding: 12px;
+  position: relative;
+  left: -15px;
 }
 
 /*Magnifie Glass Icon current hidden as only used on mobile devices: see media queries*/
@@ -235,19 +237,17 @@ article, aside{
   border-radius: 1rem;
 }
 
-/*setting width ratio between hebergement & les populaire sections flex-grow*/
+/*setting width ratio between hebergement & les populaire sections*/
 article{
-  margin-right: 2.5rem;
-  /*flex: 2;*/
+  margin-right: 2rem;
+  width: 68%;
 }
 
 aside{
-  flex: 1;
+  width: 32%;
 }
 
-
 /*HEBERGEMENT ARTICLE*/
- 
 
 /*Positioning, Spacing & styling of Hebergement cards*/
 #hebergement-items{
@@ -336,17 +336,19 @@ aside{
 /*popular cards container*/
 #popular-items{
   flex-wrap: wrap;
+  justify-content: center;
   padding-left: 0rem;
   margin-top: 1.875rem;
-  gap: 1.875rem;  /*1.5625 old val*/
+  gap: 1.875rem;
 }
 
 /*Popular card horizontal sizing*/
 /*short hand for flex-grow,flow-shrink,flex basis: items with grow & shrink,
-but no smaller than 325px*/
+but no smaller than 284px or larger than 376px*/
 .pop-card{
 flex: 1 1;
-min-width: 325px;
+min-width: 284px;
+max-width: 376px;
 }
 
 /*popular card styling*/
@@ -396,13 +398,13 @@ order to create masonry effect*/
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  margin: 1.25rem;
+  margin: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
 
 /*align text o activity card*/
 .activity-card h3{
-  padding-left: 1rem;
+  padding-left: 10px;
 }
 
 /*activity image styling*/
@@ -414,7 +416,7 @@ order to create masonry effect*/
 
 /*setting the height of each activity card*/
 .activity-card img:nth-child(1), img:nth-child(4){
-  height: 390px;
+  height: 397px;
 }
 
 .activity-card:nth-child(2) img{
@@ -422,15 +424,15 @@ order to create masonry effect*/
 }
 
 .activity-card:nth-child(3) img{
-  height: 108px;
+  height: 115px;
 }
 
 .activity-card:nth-child(5) img{
-  height: 140px;
+  height: 135px;
 } 
 
 .activity-card:nth-child(6) img{
-  height: 153px;
+  height: 158px;
 } 
 
 /*HOVER STYLING*/
@@ -458,6 +460,66 @@ footer ul{
   line-height: 1.875rem;
 }
 
+/*MEDIA QUERIES*/
+
+@media all and (max-width: 1060px){
+
+  /*reverse the column so populaire cards stack on top of hebergement cards*/
+  #hebergements{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  /*remove margin than seperated hebergement & populaire cards*/
+  article {
+    margin-right: 0rem;
+  }
+  
+    /*The populaire cards ASIDE extendS to full width of screen*/
+  article, aside{
+    width: 100%;
+  }
+
+  /*alter borders edges */
+  /*top-left,top-right,bottom-right,bottom-left*/
+  article {
+    border-radius: 0rem 0rem 1rem 1rem;
+  }
+  aside{
+    border-radius: 1rem 1rem 0rem 0rem;
+  }
+ /*ACTIVITE CARDS*/
+
+  /*new styling for activite cards: 2 times the height so all cards fit in two columns*/
+  #activity-items {
+    height: 1002px;
+  }
+
+ 
+  /* increase the width of a card to 50% , instead of 25%each so two cards fit neatly in two columns*/
+  .activity-card {
+    margin: 10px;
+    width: 50%;
+  }
+}/*end of first breakpoint*/
+
+
+@media all and (max-width: 768px){
+
+#activity-items {
+      flex-direction: row;
+}
+  
+.activity-card {
+   width: 100%;
+  }
+
+/*set all activity card pictures to the ame height*/
+.activity-card img{
+  height: 135px;
+}
+}
+
 
 
 /* BREAKPOINT MOBILE PHONES*/
@@ -469,32 +531,46 @@ body{
   margin: 0px;
 }
 
+/*reposition s'inscrire to top right*/
+  nav li:last-child {
+    position: absolute;
+    top: 75px;
+    right: -60px;
+  } 
+
+/*make remaining navigation bar span screen width*/
 nav{
   width: 100%;
   }
 
-  nav ul{
+ /* nav ul{
     justify-content: inherit;
-  }
+  }*/
 
-  nav li a{
+/*each Link only occupies 50% of scrren width*/
+  nav li{
     width: 50%;
     text-align: center;
-    
+  }
+  /*remove margin so links line up/center properly*/
+  nav a{
+    margin-left: 0px;
   }
 
-/*reposition s'inscrire to top rigtht
-nav li:last-child {
-    position: absolute;
-    top: 35px;
-    right: 20px;
-  }*/
-  
-/*define hover syle: remove top border & replace with unline border*/
-nav a:hover {
+/*define hover syle: remove topline border & replace with underline border*/
+nav a:hover{
   border-top: none;
+}
+
+/*Hebergement & Activity underline span 50% of screen*/
+nav li:hover:nth-child(-n+2){
   border-bottom: 0.2rem solid #0065fc;
 }
+/*last in list "S'inscrire" undeerline just the word*/
+nav li:last-child a:hover{
+  border-bottom: 0.2rem solid #0065fc;
+}
+
 /*#hebergement-items, #hebergement-items> h2*/
   #header, #filter, #activites{
     margin: 20px;
@@ -505,18 +581,18 @@ nav a:hover {
   margin-right: 13.5rem;
 }
 
- /*Hide "Rechercher text in Search button*/
+ /*Hide "Rechercher" text in Search button*/
   #text-button{                           
     display: none;
-  } 
+  }
+  /*Hide "Rechercher" background in Search button*/
+  label {
+    padding: 0px;
+ }
 
   /*Replace text with Magnify Logo instead*/
   #magnify-button{
     display: inline-block;
-  }
-
-  label {
-     padding: 0px;
   }
 
   /*remove background color from Hebergement section*/
