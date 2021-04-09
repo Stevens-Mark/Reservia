@@ -22,16 +22,17 @@ body {
   font-family: "Raleway", Arial, serif;
 }
 
+/*for all links*/
 a{
   color: #000;
   text-decoration: none;
 }
 
+/*set max width*/
 #main, #header {
   max-width: 1340px;
   margin: auto;
 }
-
 footer{
   background: #f2f2f2;
   max-width: 1440px;
@@ -44,6 +45,7 @@ footer{
   box-sizing: border-box;
 }
 
+/*set heading title sizes*/
 h1, h2 {
   font-size: 1.25rem; /*20px*/
   margin: 0rem;
@@ -80,10 +82,9 @@ nav ul {
   padding-left: 0rem;
 }
 
-/* navigation spacing & remove underline*/
+/* navigation spacing*/
 nav a {
    margin-left: 4rem;
-   font-size: 0.875rem;
 }
 
 /* set colour of "last" link "inscrire" to blue & bold instead of black*/
@@ -92,34 +93,32 @@ nav li:last-child a{
   font-weight: bolder;
 }
 
-/*define hover syle*/
+/*define navigation hover syle*/
 nav a:hover {
   color: #0065fc;
   font-weight: bolder;
-  border-top: 0.1rem solid #0065fc;
+  border-top: 0.2rem solid #0065fc;
   padding-top: 1.4rem;
 }
 
 /*MAIN*/
 
-
-
 /*SEARCH BUTTON */
 
-/*icon sizing & position leftside of search button*/
+/*icon sizing & position left side of search button*/
 #place-logo {
   height: 50px;
   width: 50px;
   background: #f2f2f2;
   border-radius: 0.8rem 0rem 0rem 0.8rem;
-  position: relative;
-  right: -1px;
   padding: 16px;
+  /*position: relative;
+  right: -1px;*/
 }
 
 /*styling for input field of search button*/
 input[type="text"] {
-	height: 50px;
+  height: 50px;
 	width: 234px;
   padding-left: 1rem;
   font-size: 1rem;
@@ -139,9 +138,9 @@ label {
 	left: -4px;
 }
 
-/* "visible" search button text displayed as inline-block otherwise it takes up whole line*/
+/* "visible" search button text*/
 #search-button{                           
-  display: inline;
+  display: inline-block;
 } 
 
 /*styling for Magnify Glass icon that replaces Rechercher button text on mobile devices*/
@@ -160,7 +159,6 @@ label {
   display: none;
 }
 
-
 /*FILTER BUTTONS*/
 
 /*align filter-title & buttons*/
@@ -175,7 +173,7 @@ label {
   margin-right: 0.5rem;
 }
 
-/*defining general shape of filtre button that surrounds text*/
+/*defining general shape of filter button that surrounds text*/
 .filter-btn {
   display: flex;
   cursor: pointer;
@@ -211,6 +209,8 @@ label {
 /*information icon styling*/
 #info{
   align-items: center;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 #info img {
@@ -223,16 +223,11 @@ label {
   border: 2px solid #f2f2f2;
 }
 
-#info>p{
-  margin-top: 35px;
-  margin-bottom: 35px;
-  }
-
 /*HEBERGEMENT & LES PLUS POPULAIRE SECTION*/
 
 /*style background for hebergement& les populaire*/
 article, aside{
-  padding: 2.5rem;
+  padding: 20px;
   background: #F2F2F2;
   border-radius: 1rem;
 }
@@ -264,17 +259,16 @@ aside{
   /*short hand for flex grow, flesh shrink, flex-basis
   cards shrink & grow. width of card is 240px but will grow to max 380px*/
   flex: 1 1 245px;
-  max-width: 380px;
-
+/*  max-width: 380px;*/
 }
- .heberge-card a {
+
+.heberge-card a {
   display: flex;
   flex-direction: column;
   border-radius: 1rem; 
   background-color: #fff;
   padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-
 }
 
 /*positioning of descriptions under cards*/
@@ -292,7 +286,7 @@ aside{
 }
 
 /*hebergement image styling*/
-.heberge-card>a>img{
+.heberge-card img{
  /*top-left,top-right,bottom-right,bottom-left*/
  border-radius: 1rem 1rem 0rem 0rem;
  height: 115px;
@@ -320,7 +314,6 @@ aside{
  /*LES PLUS POPULAIRE ASIDE*/
 /*Positioning, Spacing & styling of Popular cards */
 
- /* for title*/
  .popular-title{
   display: flex;
   justify-content: space-between;
@@ -380,7 +373,7 @@ max-width: 376px;
 /*activity cards container: must set height & flex column/wrap in
 order to create masonry effect*/
 #activity-items {
-	height: 480px;
+	height: 462px; /*480*/
 	flex-flow: column wrap;
   /*shorthand for flex direction & flex-wrap*/
   justify-content: space-between;
@@ -398,11 +391,11 @@ order to create masonry effect*/
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  margin: 1rem;
+  margin: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
 
-/*align text o activity card*/
+/*align text of activity cards*/
 .activity-card h3{
   padding-left: 10px;
 }
@@ -416,7 +409,7 @@ order to create masonry effect*/
 
 /*setting the height of each activity card*/
 .activity-card img:nth-child(1), img:nth-child(4){
-  height: 397px;
+  height: 380px;
 }
 
 .activity-card:nth-child(2) img{
@@ -451,7 +444,7 @@ order to create masonry effect*/
   margin-left: 3.125rem;
   margin-right: 3.125rem;
   flex: auto; 
-  /*sized according to its width and height properties, but grows to absorb any extra free space in the flex container,  and shrinks to its minimum size to fit the container*/
+  /*sized according to its width and height properties, but grows to absorb any extra free space in the flex container and shrinks to its minimum size to fit the container*/
 }  
 
 footer ul{
@@ -464,157 +457,193 @@ footer ul{
 
 @media all and (max-width: 1060px){
 
-  /*reverse the column so populaire cards stack on top of hebergement cards*/
-  #hebergements{
-    flex-direction: column-reverse;
-    align-items: center;
-  }
+/*reverse the column so populaire cards stack on top of hebergement cards*/
+#hebergements{
+  flex-direction: column-reverse;
+  align-items: center;
+}
 
-  /*remove margin than seperated hebergement & populaire cards*/
-  article {
-    margin-right: 0rem;
-  }
+/*remove margin seperating hebergement & populaire cards*/
+article {
+  margin-right: 0rem;
+}
   
-    /*The populaire cards ASIDE extendS to full width of screen*/
-  article, aside{
-    width: 100%;
-  }
+/*The hebergemnt & populaire cards are stacked on each other so
+  both ned to extend to full width of screen*/
+article, aside{
+  width: 100%;
+}
 
-  /*alter borders edges */
-  /*top-left,top-right,bottom-right,bottom-left*/
-  article {
-    border-radius: 0rem 0rem 1rem 1rem;
-  }
-  aside{
-    border-radius: 1rem 1rem 0rem 0rem;
-  }
- /*ACTIVITE CARDS*/
+/*alter borders edges */
+article {
+  border-radius: 0rem 0rem 1rem 1rem;
+}
+aside{
+  border-radius: 1rem 1rem 0rem 0rem;
+}
 
-  /*new styling for activite cards: 2 times the height so all cards fit in two columns*/
-  #activity-items {
-    height: 1002px;
-  }
-
+/*ACTIVITY CARDS*/
  
-  /* increase the width of a card to 50% , instead of 25%each so two cards fit neatly in two columns*/
-  .activity-card {
-    margin: 10px;
-    width: 50%;
-  }
+/*activity card container height change so two columns possible*/
+#activity-items {
+  height: 925px;
+ }
+
+/*50% so two cards fit neatly in two columns*/
+.activity-card {
+  width: 50%;
+}
+
 }/*end of first breakpoint*/
 
 
 @media all and (max-width: 768px){
 
-#activity-items {
-      flex-direction: row;
-}
-  
-.activity-card {
-   width: 100%;
-  }
 
-/*set all activity card pictures to the ame height*/
-.activity-card img{
+/*change navigation hover from above to below the text*/
+nav a:hover {
+  border-top: none;
+  border-bottom: 0.1rem solid #0065fc
+}
+
+/*restrict populaire card sizing to control safegauard layout*/
+.pop-card {
+  min-width: 342px;
+  max-width: 550px;
+}
+
+/*set all activity card pictures to the same height*/
+.activity-card:nth-child(-n+6) img{
   height: 135px;
-}
+} 
+
+/*activity card container height adjusted*/
+#activity-items {
+  height: 694px;
 }
 
-
+}
 
 /* BREAKPOINT MOBILE PHONES*/
 
 @media all and (max-width: 480px)
 {
 
+/*remove any margin so footer gey background spans full width*/
 body{
   margin: 0px;
 }
 
+/*need some space around below sections*/
+#header, #filter, #activities{
+  margin: 20px;
+}
+
+/*NAVIGATION*/
+
 /*reposition s'inscrire to top right*/
-  nav li:last-child {
-    position: absolute;
-    top: 75px;
-    right: -60px;
-  } 
+nav li:last-child {
+  position: absolute;
+  top: 75px;
+  right: -60px;
+} 
 
 /*make remaining navigation bar span screen width*/
 nav{
   width: 100%;
-  }
+}
 
  /* nav ul{
     justify-content: inherit;
   }*/
 
-/*each Link only occupies 50% of scrren width*/
-  nav li{
-    width: 50%;
-    text-align: center;
-  }
-  /*remove margin so links line up/center properly*/
-  nav a{
-    margin-left: 0px;
-  }
-
-/*define hover syle: remove topline border & replace with underline border*/
-nav a:hover{
-  border-top: none;
+/*Hebergement & Activity nav link each occupy 50% of screen width*/
+nav li{
+  width: 50%;
+  text-align: center;
 }
 
-/*Hebergement & Activity underline span 50% of screen*/
+/*remove margin so links line up/center properly*/
+nav a{
+  margin-left: 0px;
+}
+
+/*NAVIGATION HOVER ADJUST*/
+/*Hebergement & Activity underline span 50% of screen so target list length
+rather than link length for hover underline*/
 nav li:hover:nth-child(-n+2){
   border-bottom: 0.2rem solid #0065fc;
 }
-/*last in list "S'inscrire" undeerline just the word*/
+
+/*last in list "S'inscrire" underline just the link/word*/
 nav li:last-child a:hover{
   border-bottom: 0.2rem solid #0065fc;
 }
 
-/*#hebergement-items, #hebergement-items> h2*/
-  #header, #filter, #activites{
-    margin: 20px;
- }
+/*SEARCH BUTTON*/
 
- /*margin-rigtht forces filter buttons to next line*/
+/*margin-rigtht forces filter buttons to next line*/
 .filter-title {
   margin-right: 13.5rem;
 }
 
- /*Hide "Rechercher" text in Search button*/
-  #text-button{                           
-    display: none;
-  }
-  /*Hide "Rechercher" background in Search button*/
-  label {
-    padding: 0px;
- }
+/*Hide "Rechercher" text in Search button*/
+#text-button{                           
+ display: none;
+}
+/*Hide "Rechercher" background in Search button*/
+label {
+ padding: 0px;
+}
 
-  /*Replace text with Magnify Logo instead*/
-  #magnify-button{
-    display: inline-block;
-  }
+/*Replace text with Magnify Logo instead*/
+#magnify-button{
+  display: inline-block;
+}
 
-  /*remove background color from Hebergement section*/
-  article {
-    background: #fff;
-  }
-  
-  /*make edges straight on populaire border*/
-  aside{
-    border-radius: 0rem;
-  }
+/* MAIN*/
 
-/*to reduce sapcing between Hebergement & Activites cards when stacked*/
-#activites {
-    margin-top: 1rem;
-  }
+/*remove background colour from Hebergement section*/
+article {
+  background: #fff;
+}
+
+/*make edges straight on populaire border*/
+ aside{
+  border-radius: 0rem;
+}
+
+/*to reduce spacing between Hebergement & Activity cards when stacked*/
+#activities {
+  margin-top: 1rem;
+}
+
+/*activity cards allowed to stack & align in single column*/ 
+#activity-items {
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+/*activity cards span whole width*/
+.activity-card {
+  width: 100%;
+}
+
+/*remove margin so cards align with hebergement cards above*/
+.activity-card a {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/*FOOTER*/
 
 /*change footer direction & align text for iphone 8*/
 footer{
   flex-direction: column;
 }
-#about, #accomodation, #assistance {
+
+#about, #accommodation, #assistance {
 	margin-left: 30px;
 }
+
 }/*end of MOBILE breakpoint*/
