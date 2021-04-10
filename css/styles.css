@@ -311,6 +311,10 @@ aside{
   background-image: url("../images/icon/star-solid-grey.svg");
 }
 
+
+
+
+
  /*LES PLUS POPULAIRE ASIDE*/
 /*Positioning, Spacing & styling of Popular cards */
 
@@ -430,8 +434,14 @@ order to create masonry effect*/
 
 /*HOVER STYLING*/
 /*hover style for ALL cards*/
-.heberge-card a:hover, .pop-card a:hover, .activite-carte a:hover{
+.heberge-card a:hover, .pop-card a:hover, .activity-card a:hover{
   box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
+}
+
+/*define  hover syle for other links*/
+#afficher:hover, footer a:hover {
+  color: #0065fc;
+
 }
 
 /*FOOTER*/
