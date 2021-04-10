@@ -85,6 +85,7 @@ nav ul {
 /* navigation spacing*/
 nav a {
    margin-left: 3rem;
+   margin-right: 20px;
 }
 
 /* set colour of "last" link "inscrire" to blue & bold instead of black*/
@@ -112,8 +113,6 @@ nav a:hover {
   background: #f2f2f2;
   border-radius: 0.8rem 0rem 0rem 0.8rem;
   padding: 16px;
-  /*position: relative;
-  right: -1px;*/
 }
 
 /*styling for input field of search button*/
@@ -311,10 +310,6 @@ aside{
   background-image: url("../images/icon/star-solid-grey.svg");
 }
 
-
-
-
-
  /*LES PLUS POPULAIRE ASIDE*/
 /*Positioning, Spacing & styling of Popular cards */
 
@@ -509,7 +504,11 @@ aside{
 
 @media all and (max-width: 768px){
 
- #filter{
+#reservia-logo {
+    padding-left: 20px;
+}
+  
+#filter{
   padding: 20px;
 }
 
@@ -547,12 +546,7 @@ body{
   margin: 0px;
 }
 
-#reservia-logo {
-	padding-left: 20px;
-}
-
-/*need some space around below sections*/
- #filter, #activities{
+#activities{
   padding: 20px;
 }
 
@@ -591,11 +585,6 @@ rather than link length for hover underline*/
 nav li:hover{
   border-bottom: 0.2rem solid #0065fc;
 }
-
-/*last in list "S'inscrire" underline just the link/word
-nav li:last-child a:hover{
-  border-bottom: 0.2rem solid #0065fc;
-}*/
 
 /*SEARCH BUTTON*/
 
