@@ -255,13 +255,7 @@ aside{
 }
 
 .heberge-card{
-  /*short hand for flex grow, flesh shrink, flex-basis
-  cards shrink & grow. width of card is 240px but will grow to max 380px*/
-  flex: 1 1 245px;
-/*  max-width: 380px;*/
-}
-
-.heberge-card a {
+  flex: 1 1 245px; /*short hand for flex grow, flesh shrink, flex-basis*/
   display: flex;
   flex-direction: column;
   border-radius: 1rem; 
@@ -334,23 +328,16 @@ aside{
   gap: 1.875rem;
 }
 
-/*Popular card horizontal sizing*/
-/*short hand for flex-grow,flow-shrink,flex basis: items with grow & shrink,
-but no smaller than 284px or larger than 376px*/
+/*popular card styling & horizontal sizing*/
 .pop-card{
-flex: 1 1;
-min-width: 284px;
-max-width: 376px;
-}
-
-/*popular card styling*/
-.pop-card a{
+  flex: 1 1;        /*short hand for flex-grow,flow-shrink,flex basis: items will*/  
+  min-width: 284px; /* grow & shrink,  but no smaller than 284px or larger than 376px*/
+  max-width: 376px;
   display: flex;
   border-radius: 1rem; 
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
   padding: 5px;
-
 }
 
 /*popular image sizing etc*/
@@ -380,13 +367,9 @@ order to create masonry effect*/
   padding-left: 0rem;
 }
 
-/*set % width of cards to fit container horizontally*/
-.activity-card{
-  width: 25.75%;
-}
-
 /*styling of activity card*/
-.activity-card a{
+.activity-card{
+  width: 23%;   /*set % width of cards to fit container horizontally*/
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -429,7 +412,7 @@ order to create masonry effect*/
 
 /*HOVER STYLING*/
 /*hover style for ALL cards*/
-.heberge-card a:hover, .pop-card a:hover, .activity-card a:hover{
+.heberge-card:hover, .pop-card:hover, .activity-card:hover{
   box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
 }
 
@@ -474,7 +457,7 @@ article {
 }
   
 /*The hebergemnt & populaire cards are stacked on each other so
-  both ned to extend to full width of screen*/
+  both need to extend to full width of screen*/
 article, aside{
   width: 100%;
 }
@@ -494,14 +477,15 @@ aside{
   height: 925px;
  }
 
-/*50% so two cards fit neatly in two columns*/
+/*48% so two cards fit neatly in two columns*/
 .activity-card {
-  width: 50%;
+  width: 48%;
 }
 
 }/*end of first breakpoint*/
 
 
+/* *SECOND BREAKPOINT FOR IPAD */
 @media all and (max-width: 768px){
 
 #reservia-logo {
@@ -534,19 +518,19 @@ nav a:hover {
   height: 694px;
 }
 
-}
+}/*end of IPAD breakpoint */
 
-/* BREAKPOINT MOBILE PHONES*/
+/*BREAKPOINT MOBILE PHONES*/
 
 @media all and (max-width: 482px)
 {
 
-/*remove any margin so footer gey background spans full width*/
+/*remove any margin so footer grey background spans full width*/
 body{
   margin: 0px;
 }
 
-#activities{
+#activities h2{
   padding: 20px;
 }
 
@@ -630,15 +614,9 @@ article {
   height: 100%;
 }
 
-/*activity cards span whole width*/
+/*activity cards span 93% of whole width to align with hebergement cards*/
 .activity-card {
-  width: 100%;
-}
-
-/*remove margin so cards align with hebergement cards above*/
-.activity-card a {
-  margin-left: 0px;
-  margin-right: 0px;
+  width: 93%;
 }
 
 /*FOOTER*/
@@ -648,8 +626,9 @@ footer{
   flex-direction: column;
 }
 
+/*align footer with activity cards*/
 #about, #accommodation, #assistance {
-	margin-left: 30px;
+	margin-left: 20px;
 }
 
 }/*end of MOBILE breakpoint*/
