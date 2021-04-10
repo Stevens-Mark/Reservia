@@ -84,7 +84,7 @@ nav ul {
 
 /* navigation spacing*/
 nav a {
-   margin-left: 4rem;
+   margin-left: 3rem;
 }
 
 /* set colour of "last" link "inscrire" to blue & bold instead of black*/
@@ -509,6 +509,9 @@ aside{
 
 @media all and (max-width: 768px){
 
+ #filter{
+  padding: 20px;
+}
 
 /*change navigation hover from above to below the text*/
 nav a:hover {
@@ -536,7 +539,7 @@ nav a:hover {
 
 /* BREAKPOINT MOBILE PHONES*/
 
-@media all and (max-width: 480px)
+@media all and (max-width: 482px)
 {
 
 /*remove any margin so footer gey background spans full width*/
@@ -544,9 +547,13 @@ body{
   margin: 0px;
 }
 
+#reservia-logo {
+	padding-left: 20px;
+}
+
 /*need some space around below sections*/
-#header, #filter, #activities{
-  margin: 20px;
+ #filter, #activities{
+  padding: 20px;
 }
 
 /*NAVIGATION*/
@@ -554,8 +561,8 @@ body{
 /*reposition s'inscrire to top right*/
 nav li:last-child {
   position: absolute;
-  top: 75px;
-  right: -60px;
+  top: 55px;
+  right: 20px;
 } 
 
 /*make remaining navigation bar span screen width*/
@@ -568,7 +575,7 @@ nav{
   }*/
 
 /*Hebergement & Activity nav link each occupy 50% of screen width*/
-nav li{
+nav li:nth-child(-n+2){
   width: 50%;
   text-align: center;
 }
@@ -581,14 +588,14 @@ nav a{
 /*NAVIGATION HOVER ADJUST*/
 /*Hebergement & Activity underline span 50% of screen so target list length
 rather than link length for hover underline*/
-nav li:hover:nth-child(-n+2){
+nav li:hover{
   border-bottom: 0.2rem solid #0065fc;
 }
 
-/*last in list "S'inscrire" underline just the link/word*/
+/*last in list "S'inscrire" underline just the link/word
 nav li:last-child a:hover{
   border-bottom: 0.2rem solid #0065fc;
-}
+}*/
 
 /*SEARCH BUTTON*/
 
