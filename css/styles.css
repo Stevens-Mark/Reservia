@@ -458,6 +458,7 @@ footer ul{
 /*IPAD 1024 X 768 breakpoint */
 @media all and (max-width: 1024px){
 
+
 #reservia-logo {
   padding-left: 1.25rem;
 }
@@ -523,7 +524,7 @@ aside{
 }/*end IPAD 1024 X 768 breakpoint*/
 
 /*BREAKPOINT MOBILE PHONES*/
-/*520px chosen to avoid design break at 495px*/
+/*510px chosen to avoid activity cards design break at 495px*/
 @media all and (max-width: 520px)
 {
 
