@@ -454,7 +454,23 @@ footer ul{
 
 /*MEDIA QUERIES*/
 
-@media all and (max-width: 1060px){
+
+/*IPAD 1024 X 768 breakpoint */
+@media all and (max-width: 1024px){
+
+#reservia-logo {
+  padding-left: 1.25rem;
+}
+  
+#filter{
+  padding: 1.25rem;
+}
+
+/*change navigation hover from above to below the text*/
+nav a:hover {
+  border-top: none;
+  border-bottom: 0.1rem solid #0065fc
+}
 
 /*reverse the column so populaire cards stack on top of hebergement cards*/
 #hebergements{
@@ -481,59 +497,34 @@ aside{
   border-radius: 1rem 1rem 0rem 0rem;
 }
 
+/*restrict popular card sizing to control/safegauard layout*/
+.pop-card {
+	min-width: 283px;
+	max-width: 437px;
+}
+
 /*ACTIVITY CARDS*/
  
-/*activity card container height changes so two columns possible*/
-#activity-items {
-  height: 925px;
- }
-
 /*48% so two cards fit neatly in two columns*/
 .activity-card {
   width: 48%;
 }
 
-}/*end of first breakpoint*/
-
-
-/* *SECOND BREAKPOINT FOR IPAD */
-@media all and (max-width: 768px){
-
-#reservia-logo {
-    padding-left: 1.25rem;
-}
-  
-#filter{
-  padding: 1.25rem;
+/*set all activity card pictures to the same height but avoid being too stretched*/
+.activity-card:nth-child(-n+6) img {
+	height: 220px;
 }
 
-/*change navigation hover from above to below the text*/
-nav a:hover {
-  border-top: none;
-  border-bottom: 0.1rem solid #0065fc
-}
-
-/*restrict popular card sizing to control/safegauard layout*/
-.pop-card {
-  min-width: 342px;
-  max-width: 550px;
-}
-
-/*set all activity card pictures to the same height*/
-.activity-card:nth-child(-n+6) img{
-  height: 135px;
-} 
-
-/*activity card container height adjusted*/
+/*activity card container height changes so two columns possible*/
 #activity-items {
-  height: 694px;
+	height: 910px;
 }
 
-}/*end of IPAD breakpoint */
+}/*end IPAD 1024 X 768 breakpoint*/
 
 /*BREAKPOINT MOBILE PHONES*/
-
-@media all and (max-width: 482px)
+/*520px chosen to avoid design break at 495px*/
+@media all and (max-width: 520px)
 {
 
 /*remove any margin so footer grey background spans full width*/
@@ -623,9 +614,19 @@ article {
   height: 100%;
 }
 
-/*activity cards span 93% of whole width to align with hebergement cards*/
+/*adjust activity cards height for final mobile phone layout*/
+.activity-card:nth-child(-n+6) img{
+  height: 135px;
+} 
+
+/*adjust activity card container height to avoid layout breaking*/
+#activity-items {
+  height: 1310px;
+}
+
+/*activity cards span 92% of whole width to align with hebergement cards*/
 .activity-card {
-  width: 93%;
+  width: 92%;
 }
 
 /*FOOTER*/
