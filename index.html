@@ -26,18 +26,21 @@
 <main id="main">
 	<section id="filter">
 		<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-		<p>En plein centre ville ou en pleine nature</p>
-		
+		<p>En plein centre ville ou en pleine nature</p>		
 		<!--search button: -->
-		<div class="search-button">
+		<div>
 			<form class="d-flex" method="post" action="#">
 				<img id="place-logo" src="images/icon/map-marker-alt-solid.svg" alt="Icon" title="Icon">
+				
 				<input type="text" name="ville-research" id="ville-research" placeholder="Ex: Marseille, France" >
+
 				<!--Rechercher Button text button -->
-				<button id="text-button" class="button">Rechercher</button>
+				<button id="text-button" class="search-button">Rechercher</button>
+				
 				<!--Rechercher Magnify Icon Button-->	
-				<button id="magnify-button" class="button"><img  src="images/icon/search-solid-white.svg" alt="Magnify-glass-Logo"></button>
-		</div>
+				<button id="magnify-button" class="search-button"><img  src="images/icon/search-solid-white.svg" alt="Magnify-glass-Logo"></button>
+			</form>
+		</div>	
 		
 											<!-- 5 buttons filters: --> 
 		<div id="filter-buttons-items" class="d-flex">
@@ -62,25 +65,20 @@
 			<div class="filter-btn">
 				<img src="images/icon/dog-solid.svg" alt="Icon" title="Icon">
 				<p>Animaux authourisés</p>
-			</div>
-			
+			</div>		
 		</div>
 						<!--Information icon with text-->
 			<div id="info" class="d-flex">
 				<img src="images/icon/info-solid.svg" alt="Icon" title="Icon">
 				<p>Plus de 500 logements sont disponibles dans cette ville</p>
-			</div>	
-		
+			</div>		
 	</section>
 
-	<section id="hebergements" class="d-flex">   <!-- contains Hebergements  & les populaires -->
-		
-		<article> <!--Article: Hébergements -->
-			
+	<section id="hebergements" class="d-flex">   <!-- contains Hebergements  & les populaires -->		
+		<article> <!--Article: Hébergements -->		
 			<h2>Hébergements à Marseille</h2>
 						<!--start of Hébergement cards block -->
-			<div id="hebergement-items" class="d-flex">
-			
+			<div id="hebergement-items" class="d-flex">		
 							<!--Hébergement Card 1-->			
 				<a class="heberge-card" href="#">
 					<img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Hebergement" title="Hebergement">
@@ -97,8 +95,7 @@
 							<span class="star-grey"></span>
 						</div>
 					</div>
-				</a>	
-					
+				</a>						
 								<!--Hébergement Card 2-->		
 				<a class="heberge-card" href="#">
 					<img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hebergement" title="Hebergement">
@@ -115,8 +112,7 @@
 							<span class="star-blue"></span>
 						</div>	
 					</div>
-				</a>
-				
+				</a>			
 								<!--Hébergement Card 3-->			
 				<a class="heberge-card" href="#">
 					<img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hebergement" title="Hebergement">
@@ -185,9 +181,8 @@
 						</div>
 					</div>
 				</a> 
-
 			</div>  		<!--end of Hébergement cards block -->
-			<a id="affciher" href="#"><h3>Afficher plus</h3></a> 		          
+			<a id="afficher" href="#"><h3>Afficher plus</h3></a> 		          
 		</article>  		<!--END: Article: Hébergements -->
 
 		<aside > 		<!--Aside:les plus populaire -->
@@ -195,10 +190,8 @@
 				<h2>Les plus populaires</h2>
 				<img src="images/icon/chart-line-solid.svg" alt="Icon" title="Icon">
 			</div>
-
 							<!--start of populaire cards block -->
-			<div id="popular-items" class="d-flex">
-				
+			<div id="popular-items" class="d-flex">				
 						<!--Popular Card 1-->
 				<a class="pop-card" href="#">
 					<img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hebergement" title="Hebergement">
@@ -259,31 +252,26 @@
 					<!--start of activity cards block -->
 		<div id="activity-items" class="d-flex">
 
-			<a class="activity-card href="#">
+			<a class="activity-card" href="#">
 				<img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" title="Activités">
 				<h3>Vieux Port</h3>
 			</a>
-
 			<a class="activity-card" href="#">
 				<img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomégues">
 				<h3>Fort de Pomègues</h3>
 			</a>
-
 			<a class="activity-card" href="#">
 				<img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Iles du Frioul">
 				<h3>Îles du Frioul</h3>
 			</a>
-
 			<a class="activity-card" href="#">
 				<img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calangues">
 				<h3>Parc National des Calangues</h3>
 			</a>
-
-			<a class="activity-card"href="#">
+			<a class="activity-card" href="#">
 				<img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde">
 				<h3>Notre-Dame-de-la-Garde</h3>
 			</a>
-
 			<a class="activity-card" href="#">
 				<img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp">
 				<h3>Parc Longchamp</h3>
@@ -316,9 +304,6 @@
 				<li><a href="#">Nous contacter</a></li>
 			</ul>
 	</div>
-
 </footer>
-
 </body>
-
 </html>

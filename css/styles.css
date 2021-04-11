@@ -39,8 +39,7 @@ footer{
   margin: auto;
 }
 
-/*border-box tells the browser to take into account the border and the filling
- filling in the value defined for the width and height*/
+/*border-box tells the browser to account for any border and padding in the values specify for an element's width and height*/
 * {
   box-sizing: border-box;
 }
@@ -70,7 +69,7 @@ h3 {
 }
 
 #filter>p{
-margin-top: 8px;
+margin-top: 0.5rem;
 }
 
 /* Navigation*/
@@ -82,13 +81,13 @@ nav ul {
   padding-left: 0rem;
 }
 
-/* navigation spacing*/
+/*navigation spacing*/
 nav a {
    margin-left: 3rem;
-   margin-right: 20px;
+   margin-right: 1.25rem;
 }
 
-/* set colour of "last" link "inscrire" to blue & bold instead of black*/
+/*set colour of "last" link "inscrire" to blue & bold instead of black*/
 nav li:last-child a{
   color:#0065fc; 
   font-weight: bolder;
@@ -108,57 +107,62 @@ nav a:hover {
 
 /*icon sizing for left side of search button*/
 #place-logo {
-  height: 50px;
-  width: 50px;
+  height: 3.125rem;
+  width: 3.125rem;
   background: #f2f2f2;
   border-radius: 0.8rem 0rem 0rem 0.8rem;
-  padding: 16px;
+  padding: 1rem;
 }
 
 /*styling for input field of search button*/
 input[type="text"] {
-  height: 50px;
-	width: 234px;
+  height: 3.125rem;
+	width: 14.625rem;
   padding-left: 1rem;
   font-size: 1rem;
   font-weight: bolder;
 	border: 2px solid #f2f2f2;
 }
 
-/*2 different buttons for right part of search*/
-.button {
-  background:transparent;
-  border: none;
-  cursor: pointer;
-}
+/*Two different buttons for right part of search*/
 
-/*styling for Rechercher "text" button*/
+/*styling for "Rechercher" text for desktop button*/
 #text-button{
   background: #0065fc;
   font-size: 1rem;
   color: white;
   padding: 15px;
-	border-radius: 0rem 0.6rem 0.6rem 0rem;
+	border-radius: 0rem 0.8rem 0.8rem 0rem;
+  border: none;
+  cursor: pointer;
 }
 
-/*styling for Magnify Glass icon that replaces Rechercher button text on mobile devices*/
-#magnify-button img {
-	height: 50px;
-	width: 50px;
-	background: #0065fc;
-	border-radius: 19px;
-	padding: 12px;
+/*styling for "mobile" magnify glass button that replaces "Rechercher" text for mobile devices*/
+#magnify-button {
+  background: #0065fc;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  height: 3.125rem;
+  width: 3.125rem;
+  padding: 0rem;
   position: relative;
-  top: -1px;
-  left: -25px;
+  left: -0.625rem;
 }
 
-/* search button text "visible" for desktops*/
+/*Magnify Glass icon sizing*/
+#magnify-button img {
+  height: 3.125rem;
+  width:3.125rem;
+  padding: 0.625rem; 
+}
+
+/*search button text "visible" for desktops*/
 #text-button{                           
   display: inline-block;
 } 
 
-/*Magnifie Glass Icon currently hidden as only used
+/*Magnify Glass Icon currently hidden as only used
 on mobile devices: see media queries*/
 #magnify-button{
   display: none;
@@ -206,7 +210,8 @@ on mobile devices: see media queries*/
     left: -1px;
 }
 
-.filter-btn:hover {
+/*hover style for search & filter buttons*/
+.filter-btn:hover, .search-button:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
   /* x,y,blur,spread*/
 }
@@ -218,6 +223,7 @@ on mobile devices: see media queries*/
   margin-bottom: 35px;
 }
 
+/*information icon in circle*/
 #info img {
   height: 1.875rem;
   width: 1.875rem;
@@ -228,16 +234,16 @@ on mobile devices: see media queries*/
   border: 2px solid #f2f2f2;
 }
 
-/*HEBERGEMENT & LES PLUS POPULAIRE SECTION*/
+/*HEBERGEMENT & LES PLUS POPULAIRES SECTION*/
 
-/*style background for hebergement& les populaire*/
+/*style background for hebergement & les populaires*/
 article, aside{
-  padding: 20px;
+  padding: 1.25rem;
   background: #F2F2F2;
   border-radius: 1rem;
 }
 
-/*setting width ratio between hebergement & les populaire sections*/
+/*setting width ratio between hebergement & les populaires sections*/
 article{
   margin-right: 2rem;
   width: 68%;
@@ -261,7 +267,7 @@ aside{
 }
 
 .heberge-card{
-  flex: 1 1 245px; /*short hand for flex grow, flesh shrink, flex-basis*/
+  flex: 1 1 245px; /*short hand for flex grow, flex shrink, flex-basis*/
   display: flex;
   flex-direction: column;
   border-radius: 1rem; 
@@ -290,9 +296,10 @@ aside{
  border-radius: 1rem 1rem 0rem 0rem;
  height: 115px;
  object-fit: cover;
+ /*image is sized to maintain aspect ratio while filling the element’s entire content box*/
 }
 
-/*sizing of accomodation blue/grey star rating*/
+/*sizing/positioning of accomodation blue/grey star rating*/
 .rating{
   display: flex;
   margin-top: -0.625rem;
@@ -310,7 +317,7 @@ aside{
   background-image: url("../images/icon/star-solid-grey.svg");
 }
 
- /*LES PLUS POPULAIRE ASIDE*/
+ /*LES PLUS POPULAIRES ASIDE*/
 /*Positioning, Spacing & styling of Popular cards */
 
  .popular-title{
@@ -337,7 +344,7 @@ aside{
 /*popular card styling & horizontal sizing*/
 .pop-card{
   flex: 1 1;        /*short hand for flex-grow,flow-shrink,flex basis: items will*/  
-  min-width: 284px; /* grow & shrink,  but no smaller than 284px or larger than 376px*/
+  min-width: 284px; /* grow & shrink, but no smaller than 284px or larger than 376px*/
   max-width: 376px;
   display: flex;
   border-radius: 1rem; 
@@ -365,9 +372,8 @@ aside{
 /*activity cards container: must set height & flex column/wrap in
 order to create masonry effect*/
 #activity-items {
-	height: 462px; /*480*/
-	flex-flow: column wrap;
-  /*shorthand for flex direction & flex-wrap*/
+	height: 462px; 
+	flex-flow: column wrap;   /*shorthand for flex direction & flex-wrap*/
   justify-content: space-between;
 	align-content: space-evenly;
   padding-left: 0rem;
@@ -379,13 +385,13 @@ order to create masonry effect*/
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  margin: 16px;
+  margin: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
 
 /*align text of activity cards*/
 .activity-card h3{
-  padding-left: 10px;
+  padding-left: 0.625rem;
 }
 
 /*activity image styling*/
@@ -425,7 +431,6 @@ order to create masonry effect*/
 /*define  hover syle for other links*/
 #afficher:hover, footer a:hover {
   color: #0065fc;
-
 }
 
 /*FOOTER*/
@@ -438,7 +443,7 @@ order to create masonry effect*/
   margin-left: 3.125rem;
   margin-right: 3.125rem;
   flex: auto; 
-  /*sized according to its width and height properties, but grows to absorb any extra free space in the flex container and shrinks to its minimum size to fit the container*/
+  /*they are sized according to their width and height properties, but grow to absorb any extra free space in the flex container and shrink to their minimum size to fit the container*/
 }  
 
 footer ul{
@@ -457,13 +462,13 @@ footer ul{
   align-items: center;
 }
 
-/*remove margin seperating hebergement & populaire cards*/
+/*remove the margin that previously seperated hebergement & populaire cards*/
 article {
   margin-right: 0rem;
 }
   
-/*The hebergemnt & populaire cards are stacked on each other so
-  both need to extend to full width of screen*/
+/*The hebergement & populaire cards are stacked on each other so
+both need to extend to full width of screen*/
 article, aside{
   width: 100%;
 }
@@ -478,7 +483,7 @@ aside{
 
 /*ACTIVITY CARDS*/
  
-/*activity card container height change so two columns possible*/
+/*activity card container height changes so two columns possible*/
 #activity-items {
   height: 925px;
  }
@@ -495,11 +500,11 @@ aside{
 @media all and (max-width: 768px){
 
 #reservia-logo {
-    padding-left: 20px;
+    padding-left: 1.25rem;
 }
   
 #filter{
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 /*change navigation hover from above to below the text*/
@@ -508,7 +513,7 @@ nav a:hover {
   border-bottom: 0.1rem solid #0065fc
 }
 
-/*restrict populaire card sizing to control safegauard layout*/
+/*restrict popular card sizing to control/safegauard layout*/
 .pop-card {
   min-width: 342px;
   max-width: 550px;
@@ -536,8 +541,9 @@ body{
   margin: 0px;
 }
 
+/*align activity heading with hebergement cards stacked above*/
 #activities h2{
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 /*NAVIGATION*/
@@ -554,7 +560,7 @@ nav{
   width: 100%;
 }
 
- /* nav ul{
+/*nav ul{
     justify-content: inherit;
   }*/
 
@@ -566,7 +572,7 @@ nav li:nth-child(-n+2){
 
 /*remove margin so links line up/center properly*/
 nav a{
-  margin-left: 0px;
+  margin-left: 0rem;
 }
 
 /*NAVIGATION HOVER ADJUST*/
@@ -586,10 +592,7 @@ nav li:hover{
 /*Hide "Rechercher" text in Search button*/
 #text-button{                           
  display: none;
-}
-/*Hide "Rechercher" background in Search button*/
-label {
- padding: 0px;
+
 }
 
 /*Replace text with Magnify Logo instead*/
@@ -634,7 +637,7 @@ footer{
 
 /*align footer with activity cards*/
 #about, #accommodation, #assistance {
-	margin-left: 20px;
+	margin-left: 1.25rem;
 }
 
 }/*end of MOBILE breakpoint*/
