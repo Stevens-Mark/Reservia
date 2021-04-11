@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>    
 <body>
-	
+				<!--START of HEADER --> 
 <header id="header" class="d-flex">
 		<img id="reservia-logo" src="images/logo/Reservia.svg" alt="Reservia_logo" title="Reservia Logo">
 		<nav><!--Nav droit-->
@@ -21,9 +21,9 @@
 				<li id="inscrire"><a  href="#">S'inscrire</a></li>
 			</ul>
 		</nav>      
-</header>
+</header>		<!--END of HEADER --> 
     
-<main id="main">
+<main id="main">		<!--START of Search & Filter buttons --> 
 	<section id="filter">
 		<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 		<p>En plein centre ville ou en pleine nature</p>		
@@ -34,15 +34,15 @@
 				
 				<input type="text" name="ville-research" id="ville-research" placeholder="Ex: Marseille, France" >
 
-				<!--Rechercher Button text button -->
+				<!--"Rechercher" text button -->
 				<button id="text-button" class="search-button">Rechercher</button>
 				
-				<!--Rechercher Magnify Icon Button-->	
+				<!--Search Magnify Icon Button-->	
 				<button id="magnify-button" class="search-button"><img  src="images/icon/search-solid-white.svg" alt="Magnify-glass-Logo"></button>
 			</form>
 		</div>	
 		
-											<!-- 5 buttons filters: --> 
+				<!-- 5 buttons filters: --> 
 		<div id="filter-buttons-items" class="d-flex">
 
 			<h3 class="filter-title">Filtres</h3>
@@ -72,10 +72,10 @@
 				<img src="images/icon/info-solid.svg" alt="Icon" title="Icon">
 				<p>Plus de 500 logements sont disponibles dans cette ville</p>
 			</div>		
-	</section>
+	</section>	<!--END of Search & Filter buttons --> 
 
 	<section id="hebergements" class="d-flex">   <!-- contains Hebergements  & les populaires -->		
-		<article> <!--Article: Hébergements -->		
+		<article> <!--START of (Article): Hébergements -->		
 			<h2>Hébergements à Marseille</h2>
 						<!--start of Hébergement cards block -->
 			<div id="hebergement-items" class="d-flex">		
@@ -96,7 +96,7 @@
 						</div>
 					</div>
 				</a>						
-								<!--Hébergement Card 2-->		
+							<!--Hébergement Card 2-->		
 				<a class="heberge-card" href="#">
 					<img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hebergement" title="Hebergement">
 					<div class="description">
@@ -113,7 +113,7 @@
 						</div>	
 					</div>
 				</a>			
-								<!--Hébergement Card 3-->			
+							<!--Hébergement Card 3-->			
 				<a class="heberge-card" href="#">
 					<img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hebergement" title="Hebergement">
 					<div class="description">
@@ -183,9 +183,9 @@
 				</a> 
 			</div>  		<!--end of Hébergement cards block -->
 			<a id="afficher" href="#"><h3>Afficher plus</h3></a> 		          
-		</article>  		<!--END: Article: Hébergements -->
+		</article>  		<!--END of (Article): Hébergements -->
 
-		<aside > 		<!--Aside:les plus populaire -->
+		<aside > 		<!--START (Aside):les plus populaires -->
 			<div class="popular-title">
 				<h2>Les plus populaires</h2>
 				<img src="images/icon/chart-line-solid.svg" alt="Icon" title="Icon">
@@ -243,15 +243,14 @@
 						</div>  
 					</div>
 				</a>
-			</div>		<!--END of popular cards block -->
-		</aside><!--END: Aside:les plus populaire -->
-	</section> <!--END:Section contains Hebergement article & populaire aside --> 
+			</div>		<!--end of popular cards block -->
+		</aside><!--END of (Aside):les plus populaire -->
+	</section> <!--END of Section: Hebergement article & les populaires aside --> 
 
 	<section id="activities">
 		<h2>Activités à Marseille</h2>
 					<!--start of activity cards block -->
 		<div id="activity-items" class="d-flex">
-
 			<a class="activity-card" href="#">
 				<img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" title="Activités">
 				<h3>Vieux Port</h3>
@@ -277,33 +276,34 @@
 				<h3>Parc Longchamp</h3>
 			</a>
 		</div>				
-	</section>
-</main>
+	</section> <!--END of Section: Acitvities --> 
 
-<footer id="footer" class="d-flex">
+</main>		<!--END of MAIN --> 
 
-	<div id="about" >
-		<h3>A propos</h3>
-			<ul>
-				<li><a href="#">Functionnement du site</a></li>
-				<li><a href="#">Conditions générales de vente</a></li>
-				<li><a href="#">Données et confidentialité</a></li>
-			</ul>
-	</div>
-	<div id="accommodation">
-		<h3>Nos hébergements</h3>
-			<ul>
-				<li><a href="#">Charte qualité</a></li>
-				<li><a href="#">Soumettre votre hôtel</a></li>
-			</ul>
-	</div>
-	<div id="assistance">
-		<h3>Assistance</h3>
-			<ul>
-				<li><a href="#">Centre d'aide</a></li>
-				<li><a href="#">Nous contacter</a></li>
-			</ul>
-	</div>
-</footer>
+	<footer id="footer" class="d-flex">	<!--START of FOOTER --> 
+
+		<div id="about" >
+			<h3>A propos</h3>
+				<ul>
+					<li><a href="#">Functionnement du site</a></li>
+					<li><a href="#">Conditions générales de vente</a></li>
+					<li><a href="#">Données et confidentialité</a></li>
+				</ul>
+		</div>
+		<div id="accommodation">
+			<h3>Nos hébergements</h3>
+				<ul>
+					<li><a href="#">Charte qualité</a></li>
+					<li><a href="#">Soumettre votre hôtel</a></li>
+				</ul>
+		</div>
+		<div id="assistance">
+			<h3>Assistance</h3>
+				<ul>
+					<li><a href="#">Centre d'aide</a></li>
+					<li><a href="#">Nous contacter</a></li>
+				</ul>
+		</div>
+	</footer>
 </body>
 </html>
