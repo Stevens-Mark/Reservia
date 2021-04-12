@@ -246,11 +246,13 @@ article, aside{
 /*setting width ratio between hebergement & les populaires sections*/
 article{
   margin-right: 2rem;
-  width: 68%;
+  /*width: 68%;*/
+  flex: 2.4;
 }
 
 aside{
-  width: 32%;
+  /*width: 32%;*/
+  flex: 1;
 }
 
 /*HEBERGEMENT ARTICLE*/
@@ -345,7 +347,7 @@ aside{
 .pop-card{
   flex: 1 1;        /*short hand for flex-grow,flow-shrink,flex basis: items will*/  
   min-width: 284px; /* grow & shrink, but no smaller than 284px or larger than 376px*/
-  max-width: 376px;
+  /*max-width: 376px;*/
   display: flex;
   border-radius: 1rem; 
   background-color: #fff;
@@ -487,7 +489,8 @@ article {
 /*The hebergement & populaire cards are stacked on each other so
 both need to extend to full width of screen*/
 article, aside{
-  width: 100%;
+ /* width: 100%;*/
+ flex: 1;
 }
 
 /*alter borders edges */
@@ -500,7 +503,7 @@ aside{
 
 /*restrict popular card sizing to control/safegauard layout*/
 .pop-card {
-	min-width: 283px;
+/*	min-width: 283px;*/
 	max-width: 437px;
 }
 
