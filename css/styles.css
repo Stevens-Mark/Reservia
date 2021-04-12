@@ -81,14 +81,14 @@ nav ul {
   padding-left: 0rem;
 }
 
-/*navigation spacing*/
-nav a {
-   margin-left: 3rem;
-   margin-right: 1.25rem;
+/*left margin navigation spacing just for activities & s'inscrire otherwise layout breaks just before mobile layout */
+nav li:nth-child(n+2) a{
+  margin-left: 3.125rem;
 }
 
 /*set colour of "last" link "inscrire" to blue & bold instead of black*/
 nav li:last-child a{
+  margin-right: 1.25rem;
   color:#0065fc; 
   font-weight: bolder;
 }
@@ -469,12 +469,6 @@ footer ul{
   padding: 1.25rem;
 }
 
-/*change navigation hover from above to below the text*/
-nav a:hover {
-  border-top: none;
-  border-bottom: 0.1rem solid #0065fc
-}
-
 /*reverse the column so populaire cards stack on top of hebergement cards*/
 #hebergements{
   flex-direction: column-reverse;
@@ -548,7 +542,7 @@ nav li:last-child {
   position: absolute;
   top: 55px;
   right: 20px;
-} 
+}
 
 /*make remaining navigation bar span screen width*/
 nav{
@@ -559,7 +553,8 @@ nav{
     justify-content: inherit;
   }*/
 
-/*Hebergement & Activity nav link each occupy 50% of screen width*/
+/*Hebergement & Activity (first 2) nav link each occupy 50% of screen width
+nth-child(-n+2) is used to target these two ONLY*/
 nav li:nth-child(-n+2){
   width: 50%;
   text-align: center;
@@ -571,10 +566,18 @@ nav a{
 }
 
 /*NAVIGATION HOVER ADJUST*/
-/*Hebergement & Activity underline span 50% of screen so target list length
-rather than link length for hover underline*/
-nav li:hover{
+/*Hebergement & Activity underline span 50% of screen so target the first 2 list lengths
+rather than link lengths for hover underline. nth-child(-n+2) targets ONLY Hebergement
+& Activity links*/
+nav li:nth-child(-n+2):hover{
   border-bottom: 0.2rem solid #0065fc;
+}
+
+/*change navigation hover from above to below the text
+this targets only the link length of s'inscrire*/
+nav a:hover {
+  border-top: none;
+  border-bottom: 0.1rem solid #0065fc
 }
 
 /*SEARCH BUTTON*/
