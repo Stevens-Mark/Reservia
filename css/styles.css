@@ -68,10 +68,6 @@ h3 {
   padding-bottom: 2.5rem;
 }
 
-#filter>p{
-margin-top: 0.5rem;
-}
-
 /* Navigation*/
 nav ul {
   display: flex;
@@ -117,7 +113,7 @@ nav a:hover {
 /*styling for input field of search button*/
 input[type="text"] {
   height: 3.125rem;
-	width: 14.625rem;
+	width: 12.625rem;
   padding-left: 1rem;
   font-size: 1rem;
   font-weight: bolder;
@@ -466,7 +462,7 @@ footer ul{
 }
   
 #filter{
-  padding: 1.25rem;
+  padding-left: 1.25rem;
 }
 
 /*reverse the column so populaire cards stack on top of hebergement cards*/
@@ -584,7 +580,7 @@ nav a:hover {
 
 /*margin-rigtht forces filter buttons to next line*/
 .filter-title {
-  margin-right: 16rem;
+  margin-right: 17rem;
 }
 
 /*Hide "Rechercher" text in Search button*/
@@ -626,10 +622,10 @@ article {
   height: 135px;
 } 
 
-/*adjust activity card container height to avoid layout breaking*/
+/*adjust activity card container height to avoid layout breaking
 #activity-items {
   height: 1310px;
-}
+}*/
 
 /*activity cards span 92% of whole width to align with hebergement cards*/
 .activity-card {
