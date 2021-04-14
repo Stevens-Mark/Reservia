@@ -64,7 +64,6 @@ h3 {
 }
 
 #reservia-logo{
-  padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
 
@@ -233,21 +232,20 @@ on mobile devices: see media queries*/
 /*HEBERGEMENT & LES PLUS POPULAIRES SECTION*/
 
 /*style background for hebergement & les populaires*/
-article, aside{
+#article, #aside{
   padding: 1.25rem;
   background: #F2F2F2;
   border-radius: 1rem;
 }
 
 /*setting width ratio between hebergement & les populaires sections*/
-article{
+#article{
   margin-right: 2rem;
   /*width: 68%;*/
   flex: 2.4;
 }
 
-aside{
-  /*width: 32%;*/
+#aside{
   flex: 1;
 }
 
@@ -342,8 +340,7 @@ aside{
 /*popular card styling & horizontal sizing*/
 .pop-card{
   flex: 1 1;        /*short hand for flex-grow,flow-shrink,flex basis: items will*/  
-  min-width: 284px; /* grow & shrink, but no smaller than 284px or larger than 376px*/
-  /*max-width: 376px;*/
+  min-width: 284px; /* grow & shrink, but no smaller than 284px*/
   display: flex;
   border-radius: 1rem; 
   background-color: #fff;
@@ -460,7 +457,7 @@ footer ul{
 #reservia-logo, #filter {
   padding-left: 1.25rem;
 }
-  
+
 /*reverse the column so populaire cards stack on top of hebergement cards*/
 #hebergements{
   flex-direction: column-reverse;
@@ -468,22 +465,21 @@ footer ul{
 }
 
 /*remove the margin that previously seperated hebergement & populaire cards*/
-article {
+#article {
   margin-right: 0rem;
 }
   
 /*The hebergement & populaire cards are stacked on each other so
 both need to extend to full width of screen*/
-article, aside{
- /* width: 100%;*/
+#article, #aside{
  flex: 1;
 }
 
 /*alter borders edges */
-article {
+#article {
   border-radius: 0rem 0rem 1rem 1rem;
 }
-aside{
+#aside{
   border-radius: 1rem 1rem 0rem 0rem;
 }
 
@@ -518,6 +514,11 @@ aside{
 @media all and (max-width: 505px)
 {
 
+ #reservia-logo{
+    padding-top: 2.5rem;
+}
+    
+
 /*remove any margin so footer grey background spans full width*/
 body{
   margin: 0px;
@@ -541,10 +542,6 @@ nav li:last-child {
 nav{
   width: 100%;
 }
-
-/*nav ul{
-    justify-content: inherit;
-  }*/
 
 /*Hebergement & Activity (first 2) nav link each occupy 50% of screen width
 nth-child(-n+2) is used to target these two ONLY*/
@@ -594,12 +591,12 @@ nav a:hover {
 /* MAIN*/
 
 /*remove background colour from Hebergement section*/
-article {
+#article {
   background: #fff;
 }
 
 /*make edges straight on populaire border*/
- aside{
+ #aside{
   border-radius: 0rem;
 }
 
@@ -618,11 +615,6 @@ article {
 .activity-card:nth-child(-n+6) img{
   height: 135px;
 } 
-
-/*adjust activity card container height to avoid layout breaking
-#activity-items {
-  height: 1310px;
-}*/
 
 /*adjust percentages so activity cards align with hebergement cards*/
 .activity-card {
