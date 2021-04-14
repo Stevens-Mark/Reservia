@@ -370,7 +370,7 @@ aside{
 /*activity cards container: must set height & flex column/wrap in
 order to create masonry effect*/
 #activity-items {
-	height: 462px; 
+	height: 455px; 
 	flex-flow: column wrap;   /*shorthand for flex direction & flex-wrap*/
   justify-content: space-between;
 	align-content: space-evenly;
@@ -379,11 +379,11 @@ order to create masonry effect*/
 
 /*styling of activity card*/
 .activity-card{
-  width: 23%;   /*set % width of cards to fit container horizontally*/
+  width: 23.5%;   /*set % width of cards to fit container horizontally*/
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  margin: 1rem;
+  margin: 1%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
 
@@ -457,14 +457,10 @@ footer ul{
 @media all and (max-width: 1024px){
 
 
-#reservia-logo {
+#reservia-logo, #filter {
   padding-left: 1.25rem;
 }
   
-#filter{
-  padding-left: 1.25rem;
-}
-
 /*reverse the column so populaire cards stack on top of hebergement cards*/
 #hebergements{
   flex-direction: column-reverse;
@@ -499,9 +495,10 @@ aside{
 
 /*ACTIVITY CARDS*/
  
-/*48% so two cards fit neatly in two columns*/
+/*percenatges used so two cards fit neatly in two columns*/
 .activity-card {
   width: 48%;
+  margin: 2%;
 }
 
 /*set all activity card pictures to the same height but avoid being too stretched*/
@@ -511,14 +508,14 @@ aside{
 
 /*activity card container height changes so two columns possible*/
 #activity-items {
-	height: 910px;
+	height: 940px;
 }
 
 }/*end IPAD 1024 X 768 breakpoint*/
 
 /*BREAKPOINT MOBILE PHONES*/
-/*510px chosen to avoid activity cards design break at 495px*/
-@media all and (max-width: 520px)
+/*505px chosen to avoid activity cards design break at 494px*/
+@media all and (max-width: 505px)
 {
 
 /*remove any margin so footer grey background spans full width*/
@@ -528,7 +525,7 @@ body{
 
 /*align activity heading with hebergement cards stacked above*/
 #activities h2{
-  padding: 1.25rem;
+  padding-left: 1.25rem;
 }
 
 /*NAVIGATION*/
@@ -627,9 +624,10 @@ article {
   height: 1310px;
 }*/
 
-/*activity cards span 92% of whole width to align with hebergement cards*/
+/*adjust percentages so activity cards align with hebergement cards*/
 .activity-card {
   width: 92%;
+  margin: 4%;
 }
 
 /*FOOTER*/
