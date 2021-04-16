@@ -71,8 +71,8 @@ h3 {
 nav ul {
   display: flex;
   list-style-type: none; /*remove point*/
-  justify-content: flex-end;
-  flex-wrap: wrap-reverse;
+  /*justify-content: flex-end;*/
+  /*flex-wrap: wrap-reverse;*/
   padding-left: 0rem;
 }
 
@@ -232,24 +232,24 @@ on mobile devices: see media queries*/
 /*HEBERGEMENT & LES PLUS POPULAIRES SECTION*/
 
 /*style background for hebergement & les populaires*/
-#article, #aside{
+#left-side, #right-side{
   padding: 1.25rem;
   background: #F2F2F2;
   border-radius: 1rem;
 }
 
 /*setting width ratio between hebergement & les populaires sections*/
-#article{
+#left-side{
   margin-right: 2rem;
   /*width: 68%;*/
   flex: 2.4;
 }
 
-#aside{
+#right-side{
   flex: 1;
 }
 
-/*HEBERGEMENT ARTICLE*/
+/*HEBERGEMENT (LEFTSIDE)*/
 
 /*Positioning, Spacing & styling of Hebergement cards*/
 #hebergement-items{
@@ -313,7 +313,7 @@ on mobile devices: see media queries*/
   background-image: url("../images/icon/star-solid-grey.svg");
 }
 
- /*LES PLUS POPULAIRES ASIDE*/
+ /*LES PLUS POPULAIRES (RIGHT-SIDE*/
 /*Positioning, Spacing & styling of Popular cards */
 
  .popular-title{
@@ -465,21 +465,21 @@ footer ul{
 }
 
 /*remove the margin that previously seperated hebergement & populaire cards*/
-#article {
+#left-side {
   margin-right: 0rem;
 }
   
 /*The hebergement & populaire cards are stacked on each other so
 both need to extend to full width of screen*/
-#article, #aside{
+#left-side, #right-side{
  flex: 1;
 }
 
 /*alter borders edges */
-#article {
+#left-side {
   border-radius: 0rem 0rem 1rem 1rem;
 }
-#aside{
+#right-side{
   border-radius: 1rem 1rem 0rem 0rem;
 }
 
@@ -514,11 +514,6 @@ both need to extend to full width of screen*/
 @media all and (max-width: 505px)
 {
 
- #reservia-logo{
-    padding-top: 2.5rem;
-}
-    
-
 /*remove any margin so footer grey background spans full width*/
 body{
   margin: 0px;
@@ -534,8 +529,8 @@ body{
 /*reposition s'inscrire to top right*/
 nav li:last-child {
   position: absolute;
-  top: 55px;
-  right: 20px;
+  top: 20px;
+  right: 0px;
 }
 
 /*make remaining navigation bar span screen width*/
@@ -543,30 +538,28 @@ nav{
   width: 100%;
 }
 
-/*Hebergement & Activity (first 2) nav link each occupy 50% of screen width
-nth-child(-n+2) is used to target these two ONLY*/
+/*Hebergement & Activity links each occupy 50% of screen width*/
 nav li:nth-child(-n+2){
   width: 50%;
   text-align: center;
 }
 
-/*remove margin so links line up/center properly*/
-nav a{
-  margin-left: 0rem;
+/*NAVIGATION HOVER ADJUST*/
+
+/*remove navigation hover from above the links */
+nav a:hover {
+  border-top: none;
 }
 
-/*NAVIGATION HOVER ADJUST*/
-/*Hebergement & Activity underline span 50% of screen so target the first 2 list lengths
-rather than link lengths for hover underline. nth-child(-n+2) targets ONLY Hebergement
+/*Hebergement & Activity underline span 50% of screen so target <li> length
+rather than <a> length for hover underline. nth-child(-n+2) targets ONLY Hebergement
 & Activity links*/
 nav li:nth-child(-n+2):hover{
   border-bottom: 0.2rem solid #0065fc;
 }
 
-/*change navigation hover from above to below the text
-this targets only the link length of s'inscrire*/
-nav a:hover {
-  border-top: none;
+/*underline s'inscrire link only*/
+nav li:last-child a:hover{
   border-bottom: 0.1rem solid #0065fc
 }
 
@@ -591,12 +584,12 @@ nav a:hover {
 /* MAIN*/
 
 /*remove background colour from Hebergement section*/
-#article {
+#left-side {
   background: #fff;
 }
 
 /*make edges straight on populaire border*/
- #aside{
+ #right-side{
   border-radius: 0rem;
 }
 
