@@ -110,7 +110,7 @@ nav a:hover {
 }
 
 /*styling for input field of search button*/
-input[type="text"] {
+input[type="search"] {
   height: 3.125rem;
 	width: 12.625rem;
   padding-left: 1rem;
@@ -132,7 +132,7 @@ input[type="text"] {
   cursor: pointer;
 }
 
-/*styling for "mobile" magnify glass button that replaces "Rechercher" text for mobile devices*/
+/*styling/positioning for "mobile" magnify glass button that replaces "Rechercher" text for mobile devices*/
 #magnify-button {
   background: #0065fc;
   border-radius: 0.8rem;
@@ -140,16 +140,9 @@ input[type="text"] {
   cursor: pointer;
   height: 3.125rem;
   width: 3.125rem;
-  padding: 0rem;
+  padding: 0.625rem;
   position: relative;
   left: -0.625rem;
-}
-
-/*Magnify Glass icon sizing*/
-#magnify-button img {
-  height: 3.125rem;
-  width:3.125rem;
-  padding: 0.625rem; 
 }
 
 /*search button text "visible" for desktops*/
