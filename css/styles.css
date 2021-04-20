@@ -71,29 +71,27 @@ h3 {
 nav ul {
   display: flex;
   list-style-type: none; /*remove point*/
-  /*justify-content: flex-end;*/
-  /*flex-wrap: wrap-reverse;*/
   padding-left: 0rem;
 }
 
-/*left margin navigation spacing just for activities & s'inscrire otherwise layout breaks just before mobile layout */
-nav li:nth-child(n+2) a{
-  margin-left: 3.125rem;
+/* navigation spacing */
+nav li{
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /*set colour of "last" link "inscrire" to blue & bold instead of black*/
 nav li:last-child a{
-  margin-right: 1.25rem;
   color:#0065fc; 
   font-weight: bolder;
 }
 
 /*define navigation hover syle*/
-nav a:hover {
+nav li :hover {
   color: #0065fc;
   font-weight: bolder;
   border-top: 0.2rem solid #0065fc;
-  padding-top: 1.4rem;
+  padding-top: 21px;
 }
 
 /*MAIN*/
@@ -431,7 +429,9 @@ order to create masonry effect*/
   margin-left: 3.125rem;
   margin-right: 3.125rem;
   flex: auto; 
-  /*they are sized according to their width and height properties, but grow to absorb any extra free space in the flex container and shrink to their minimum size to fit the container*/
+  /*they are sized according to their width and height properties, 
+  but grow to absorb any extra free space in the flex container and shrink 
+  to their minimum size to fit the container*/
 }  
 
 footer ul{
@@ -540,15 +540,17 @@ nav li:nth-child(-n+2){
 /*NAVIGATION HOVER ADJUST*/
 
 /*remove navigation hover from above the links */
-nav a:hover {
+nav li :hover {
   border-top: none;
 }
 
 /*Hebergement & Activity underline span 50% of screen so target <li> length
 rather than <a> length for hover underline. nth-child(-n+2) targets ONLY Hebergement
-& Activity links*/
+& Activity list items*/
 nav li:nth-child(-n+2):hover{
+  color: #0065fc;
   border-bottom: 0.2rem solid #0065fc;
+ 
 }
 
 /*underline s'inscrire link only*/
@@ -566,7 +568,6 @@ nav li:last-child a:hover{
 /*Hide "Rechercher" text in Search button*/
 #text-button{                           
  display: none;
-
 }
 
 /*Replace text with Magnify Logo instead*/
