@@ -12,25 +12,26 @@
 </head>    
 <body>
 				<!--START of HEADER --> 
-<header id="header" class="d-flex">
-		<img id="reservia-logo" src="images/logo/Reservia.svg" alt="Reservia_logo" title="Reservia Logo">
+<header id="header">
+
+	<div id="heading-banner" class="d-flex">
+		<img id="reservia-logo" src="images/logo/Reservia.svg" alt="Reservia_logo">
 		<nav><!--Nav droit-->
 			<ul>
 				<li><a href="#hebergements">Hébergements</a></li>
 				<li><a href="#activities">Activitiés</a></li>
 				<li id="inscrire"><a  href="#">S'inscrire</a></li>
 			</ul>
-		</nav>      
-</header>		<!--END of HEADER --> 
-    
-<main id="main">		<!--START of Search & Filter buttons --> 
+		</nav>
+	</div>	   
+					<!--START of Search & Filter buttons --> 
 	<section id="filter">
 		<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 		<p>En plein centre ville ou en pleine nature</p>		
 		<!--search button: -->
 		<div>
 			<form class="d-flex" method="post" action="#">
-				<img id="place-logo" src="images/icon/map-marker-alt-solid.svg" alt="Icon" title="Icon">
+				<img id="place-logo" src="images/icon/map-marker-alt-solid.svg" alt="Map Marker Icon">
 				
 				<input type="search" name="city-search" id="city-search" placeholder="Ex: Marseille, France" >
 
@@ -38,50 +39,54 @@
 				<input type="submit" id="text-button" class="search-button" value="Rechercher">
 
 				<!--Search Magnify Icon Button-->
-				<input type="image" id="magnify-button" class="search-button" alt="Search" src="images/icon/search-solid-white.svg">
+				<input type="image" id="magnify-button" class="search-button" alt="Magnify Glass" src="images/icon/search-solid-white.svg">
 			</form>
 		</div>	
 		
 				<!-- 5 buttons filters: --> 
 		<div id="filter-buttons-items" class="d-flex">
 
-			<h3 class="filter-title">Filtres</h3>
+			<h2 class="filter-title">Filtres</h2>
 
 			<div class="filter-btn">
-					<img src="images/icon/money-bill-wave-solid.svg" alt="Icon" title="Icon">
-					<p> Economique</p>
+					<img src="images/icon/money-bill-wave-solid.svg" alt="">
+					<span>Economique</span>
 			</div>
 
 			<div class="filter-btn">
-				<img src="images/icon/child-solid.svg" alt="Icon" title="Icon">
-				<p>Familial</p>
+				<img src="images/icon/child-solid.svg" alt="">
+				<span>Familial</span>
 			</div>
 
 			<div class="filter-btn">
-				<img src="images/icon/heart-solid.svg" alt="Icon" title="Icon">
-				<p>Romantique</p>
+				<img src="images/icon/heart-solid.svg" alt="">
+				<span>Romantique</span>
 			</div>
 
 			<div class="filter-btn">
-				<img src="images/icon/dog-solid.svg" alt="Icon" title="Icon">
-				<p>Animaux authourisés</p>
+				<img src="images/icon/dog-solid.svg" alt="">
+				<span>Animaux authourisés</span>
 			</div>		
 		</div>
 						<!--Information icon with text-->
 			<div id="info" class="d-flex">
-				<img src="images/icon/info-solid.svg" alt="Icon" title="Icon">
+				<img src="images/icon/info-solid.svg" alt="">
 				<p>Plus de 500 logements sont disponibles dans cette ville</p>
 			</div>		
-	</section>	<!--END of Search & Filter buttons --> 
+	</section>	<!--END of Search & Filter buttons -->   
+	
+</header>		<!--END of HEADER --> 
+    
+<main id="main" class="d-flex">		
+	  			<!-- contains Hebergements  & les populaires -->	
 
-	<section id="hebergements" class="d-flex">   <!-- contains Hebergements  & les populaires -->		
 		<div id="left-side"> <!--START of Hébergements -->		
 			<h2>Hébergements à Marseille</h2>
 						<!--start of Hébergement cards block -->
 			<div id="hebergement-items" class="d-flex">		
 							<!--Hébergement Card 1-->			
 				<a class="heberge-card" href="#">
-					<img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge la Cannebière">
 					<div class="description">
 						<div>
 							<h3>Auberge la Cannebière</h3>
@@ -98,7 +103,7 @@
 				</a>						
 							<!--Hébergement Card 2-->		
 				<a class="heberge-card" href="#">
-					<img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hôtel du port">
 					<div class="description">
 						<div>
 							<h3>Hôtel du port</h3>
@@ -115,7 +120,7 @@
 				</a>			
 							<!--Hébergement Card 3-->			
 				<a class="heberge-card" href="#">
-					<img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel Les mouettes">
 					<div class="description">
 						<div>
 							<h3>Hôtel Les mouettes</h3>
@@ -132,7 +137,7 @@
 				</a>
 							<!--Hébergement Card 4-->			
 				<a class="heberge-card" href="#">
-					<img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hötel de la mer">
 					<div class="description">
 						<div>		
 							<h3>Hötel de la mer</h3>
@@ -149,7 +154,7 @@
 					></a>
 							<!--Hébergement Card 5-->			
 				<a class="heberge-card" href="#">
-					<img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge Le Panier">
 					<div class="description">
 						<div>
 							<h3>Auberge Le Panier</h3>
@@ -166,7 +171,7 @@
 				</a>
 							<!--Hébergement Card 6-->			
 				<a class="heberge-card" href="#">
-					<img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hötel chez Amina">
 					<div class="description">
 						<div>
 							<h3>Hötel chez Amina</h3>
@@ -183,18 +188,18 @@
 				</a> 
 			</div>  		<!--end of Hébergement cards block -->
 			<a id="afficher" href="#"><h3>Afficher plus</h3></a> 		          
-		</div>  		<!--END of Hébergements -->
+		</div>  			<!--END of Hébergements -->
 
-		<div id="right-side" > 		<!--START:les plus populaires -->
+		<aside id="right-side" > 		<!--START:les plus populaires -->
 			<div class="popular-title">
 				<h2>Les plus populaires</h2>
-				<img src="images/icon/chart-line-solid.svg" alt="Icon" title="Icon">
+				<img src="images/icon/chart-line-solid.svg" alt="">
 			</div>
 							<!--start of populaire cards block -->
 			<div id="popular-items" class="d-flex">				
 						<!--Popular Card 1-->
 				<a class="pop-card" href="#">
-					<img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hôtel Le soleil du matin">
 					<div class="description">
 						<div>
 							<h3>Hôtel Le soleil du matin</h3>
@@ -211,7 +216,7 @@
 				</a>			
 						<!--Popular Card 2-->
 				<a class="pop-card" href="#">
-					<img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Au coeur de l'eau Chambres d'hôtes">
 					<div class="description">
 						<div>
 						   <h3>Au coeur de l'eau Chambres d'hôtes</h3>
@@ -228,7 +233,7 @@
 				</a>
 						<!--Popular Card 3-->		
 				<a class="pop-card" href="#">
-					<img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hebergement" title="Hebergement">
+					<img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hôtel Tout bleu et Blanc">
 					<div class="description">
 						<div>
 						   <h3>Hôtel Tout bleu et Blanc</h3>
@@ -244,8 +249,8 @@
 					</div>
 				</a>
 			</div>		<!--end of popular cards block -->
-		</div><!--END of les plus populaire -->
-	</section> <!--END of Section: Hebergement & les populaires  --> 
+		</aside>		<!--END of les plus populaire -->
+</main>		<!--END of MAIN -->
 
 	<section id="activities">
 		<h2>Activités à Marseille</h2>
@@ -276,14 +281,12 @@
 				<h3>Parc Longchamp</h3>
 			</a>
 		</div>				
-	</section> <!--END of Section: Acitvities --> 
-
-</main>		<!--END of MAIN --> 
+	</section> <!--END of Section: Activities --> 
 
 	<footer id="footer" class="d-flex">	<!--START of FOOTER --> 
 
 		<div id="about" >
-			<h3>A propos</h3>
+			<h2>A propos</h2>
 				<ul>
 					<li><a href="#">Functionnement du site</a></li>
 					<li><a href="#">Conditions générales de vente</a></li>
@@ -291,14 +294,14 @@
 				</ul>
 		</div>
 		<div id="accommodation">
-			<h3>Nos hébergements</h3>
+			<h2>Nos hébergements</h2>
 				<ul>
 					<li><a href="#">Charte qualité</a></li>
 					<li><a href="#">Soumettre votre hôtel</a></li>
 				</ul>
 		</div>
 		<div id="assistance">
-			<h3>Assistance</h3>
+			<h2>Assistance</h2>
 				<ul>
 					<li><a href="#">Centre d'aide</a></li>
 					<li><a href="#">Nous contacter</a></li>
