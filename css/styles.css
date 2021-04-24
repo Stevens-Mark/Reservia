@@ -29,7 +29,7 @@ a{
 }
 
 /*set max width*/
-#main, #header {
+#header, #main, #activities {
   max-width: 1340px;
   margin: auto;
 }
@@ -58,7 +58,7 @@ h3 {
 }
 
 /*Logo & Navigation*/
-#header {
+#heading-banner {
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -93,8 +93,6 @@ nav li :hover {
   border-top: 0.2rem solid #0065fc;
   padding-top: 21px;
 }
-
-/*MAIN*/
 
 /*SEARCH BUTTON */
 
@@ -164,7 +162,8 @@ on mobile devices: see media queries*/
   gap: 1.5625rem;
 }
 
-.filter-title {
+.filter-title{
+  font-size: 1rem;
   margin-right: 0.5rem;
 }
 
@@ -181,7 +180,7 @@ on mobile devices: see media queries*/
 }
 
 /*aligning text in filter button*/
-.filter-btn p{
+.filter-btn span{
     padding: 1rem;
 }
 
@@ -219,6 +218,8 @@ on mobile devices: see media queries*/
   background: #ffff;
   border: 2px solid #f2f2f2;
 }
+
+/*MAIN*/
 
 /*HEBERGEMENT & LES PLUS POPULAIRES SECTION*/
 
@@ -423,6 +424,12 @@ order to create masonry effect*/
 
 #footer{
   flex-wrap: wrap;
+
+}
+
+#footer h2{
+  font-size: 1rem;
+  padding-top: 1.875rem;
 }
 
 #about, #accommodation, #assistance{
@@ -438,6 +445,7 @@ footer ul{
   list-style-type: none;
   padding-left: 0rem;
   line-height: 1.875rem;
+
 }
 
 /*MEDIA QUERIES*/
@@ -452,7 +460,7 @@ footer ul{
 }
 
 /*reverse the column so populaire cards stack on top of hebergement cards*/
-#hebergements{
+#main{
   flex-direction: column-reverse;
   align-items: center;
 }
