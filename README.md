@@ -1,7 +1,8 @@
 # StevensMark_P2_30032021
 
 Reservia
-
+ OPen website at Git pages: https://stevens-mark.github.io/StevensMark_P2_30032021/
+ 
 Turn a mock-up into a website
 
 (This project is part of the "Front-End Developer" training by OpenClassrooms).
