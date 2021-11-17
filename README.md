@@ -1,4 +1,4 @@
-![Reservia(/image/logo/Reservia.svg)
+![Reservia(/images/logo/Reservia.svg)
 
 # OPENCLASSROOMS PROJECT 2
 
