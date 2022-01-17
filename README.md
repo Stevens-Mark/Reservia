@@ -1,9 +1,11 @@
 ![Reservia](/images/logo/Reservia.svg)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fce6c2c6-34a3-4f5d-ad69-8105d440d79f/deploy-status)](https://app.netlify.com/sites/reservia2021/deploys)
+
 # OPENCLASSROOMS PROJECT 2
 
 # Reservia
- Open website at Git pages: https://stevens-mark.github.io/StevensMark_P2_30032021/
+ Open website at [Reservia-netifly](https://reservia2021.netlify.app/)
  
 ## Turn a mock-up into a website
 
@@ -24,6 +26,8 @@ For more information (scenario, etc.) on this project, please see the "Project b
 
 
 # OPENCLASSROOMS PROJET 2
+
+Ouvrir le site web à [Reservia-netifly](https://reservia2021.netlify.app/)
 
 ## Transformez une maquette en site web
 
