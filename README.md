@@ -5,7 +5,7 @@
 # OPENCLASSROOMS PROJECT 2
 
 # Reservia
- Open website at [Reservia-netifly](https://reservia2021.netlify.app/)
+ Open website at [Reservia](https://reservia2021.netlify.app/)
  
 ## Turn a mock-up into a website
 
@@ -27,7 +27,7 @@ For more information (scenario, etc.) on this project, please see the "Project b
 
 # OPENCLASSROOMS PROJET 2
 
-Ouvrir le site web à [Reservia-netifly](https://reservia2021.netlify.app/)
+Ouvrir le site web à [Reservia](https://reservia2021.netlify.app/)
 
 ## Transformez une maquette en site web
 
